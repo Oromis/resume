@@ -107,7 +107,7 @@ const Content = ({
             }}
             overrideColor={overrideColor}
         >
-            <FormattedMessage id="InterestedBy.front.content" defaultMessage="Interested by:" />
+            <FormattedMessage id="InterestedBy.front.content" defaultMessage="Interested in:" />
             <div className={classes.interestedByValue}>{interestedBy}</div>
         </ProfileCardFrontTypography>
     );

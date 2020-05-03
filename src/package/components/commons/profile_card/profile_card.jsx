@@ -138,7 +138,11 @@ const ProfileCardComponent = ({
         [sideProps]
     );
 
-    const handleMouseEnter = useCallback(() => setSide(SIDES.BACK), [setSide]);
+    const handleMouseEnter = useCallback(() => {
+        if (sides[SIDES.BACK] != null) {
+            setSide(SIDES.BACK);
+        }
+    }, [setSide]);
 
     const handleMouseLeave = useCallback(() => {
         if (hasDialogOpened) {

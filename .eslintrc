@@ -44,7 +44,8 @@
         "react/prop-types": ["off"],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "off",
-        "space-before-function-paren": "off"
+        "space-before-function-paren": "off",
+        "linebreak-style": "off"
     },
     "globals": {
         "window": true,

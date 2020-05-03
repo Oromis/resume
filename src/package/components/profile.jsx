@@ -43,6 +43,7 @@ const DEFAULT_OPTIONS = Object.freeze({
     locale: 'en',
     customization: {
         imageHeader: {
+            // TODO update banner
             url: 'https://cdn.filestackcontent.com/8I2wVnCRTFxypXRYLRsp',
             alt: 'Default Banner'
         }

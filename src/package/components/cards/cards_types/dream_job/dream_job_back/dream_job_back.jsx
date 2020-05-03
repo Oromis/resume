@@ -122,11 +122,19 @@ const DreamJobPlaces = ({ places = [], classes }) => {
     if (!remainingPlaces.length) {
         return (
             <ProfileCardSectionText>
-                <FormattedMessage
-                    id="Dreamjob.Back.Location.OnePlace"
-                    defaultMessage="I want to work in {place}"
-                    values={{ place: firstPlace?.name ?? '' }}
-                />
+                {firstPlace?.ideally ? (
+                    <FormattedMessage
+                        id={'Dreamjob.Back.Location.OnePlaceConcrete'}
+                        defaultMessage="I want to work in {place}, ideally in {ideally}"
+                        values={{ place: firstPlace?.name ?? '', ideally: firstPlace?.ideally ?? '' }}
+                    />
+                ) : (
+                    <FormattedMessage
+                        id={'Dreamjob.Back.Location.OnePlace'}
+                        defaultMessage="I want to work in {place}"
+                        values={{ place: firstPlace?.name ?? '' }}
+                    />
+                )}
             </ProfileCardSectionText>
         );
     }

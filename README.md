@@ -42,7 +42,7 @@ The resume is designed with 10 Cards (we plan to add more !)
 - ✨ Projects: Highlight your best projects
 - 📺 Hobbies: Show your hobbies with GIF !
 - 🎶 Music: Add your favorite Spotify Playlist
-- 🔭 Interested by: Tell more about technologies you would love to learn
+- 🔭 Interested in: Tell more about technologies you would love to learn
 - 🌎 Languages: What language do you master?
 
 Each cards comes with an edit dialog to edit your JSON Resume directly inside the app

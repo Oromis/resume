@@ -8,7 +8,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import download from 'downloadjs';
 import { Button } from '@welovedevs/ui';
 
-import JsonStub from './data/json_stub.json';
+import JsonStub from './data/resume-en.json';
 import DeveloperProfile from './package';
 import { ReactComponent as SaveIcon } from './package/assets/icons/drop_file.svg';
 
@@ -23,7 +23,7 @@ const mergeFunction = (objValue, srcValue, key) => {
     return undefined;
 };
 
-const mode = process.env.REACT_APP_MODE || 'edit';
+const mode = process.env.REACT_APP_MODE || 'readOnly';
 
 function App() {
     const classes = useStyles();
@@ -68,7 +68,7 @@ function App() {
             }}
             additionalNodes={{
                 banner: {
-                    actionsButtons: mode === 'edit' && (
+                    actionsButtons: (
                         <Button variant="outlined" onClick={handleClick} color={'light'}>
                             <SaveIcon className={classes.saveIcon} />
                             <FormattedMessage id="Profile.header.jsonResume.download" defaultMessage="Export" />

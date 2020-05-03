@@ -26,19 +26,19 @@ export const remoteSelectTranslations = defineMessages({
 export const remoteDisplayTranslations = defineMessages({
     never: {
         id: 'Developer.RemoteFrequency.Display.never',
-        defaultMessage: "I'm not interested by remote work"
+        defaultMessage: "I'm not interested in remote work"
     },
     occasionally: {
         id: 'Developer.RemoteFrequency.Display.occasionally',
-        defaultMessage: "I'm interested by occasional remote work (a few times a month)"
+        defaultMessage: "I'm interested in occasional remote work (a few times a month)"
     },
     regularly: {
         id: 'Developer.RemoteFrequency.Display.regularly',
-        defaultMessage: "I'm interested by regular remote work (a few times a week)"
+        defaultMessage: "I'm interested in regular remote work (a few times a week)"
     },
     fullTime: {
         id: 'Developer.RemoteFrequency.Display.fullTime',
-        defaultMessage: "I'm interested by full-time remote work"
+        defaultMessage: "I'm interested in full-time remote work"
     },
     others: {
         id: 'Developer.RemoteFrequency.Display.other',

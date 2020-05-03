@@ -1,22 +1,22 @@
 {
-    "name": "@welovedevs/react-ultimate-resume",
-    "version": "1.0.4-beta.1",
-    "description": "Developer profile for W3D",
+    "name": "resume",
+    "version": "1.0.0",
+    "description": "Resume of David Bauske",
     "main": "lib/index.js",
     "scripts": {
-        "start": "touch .env.local && sh -ac 'sh .env.${NODE_ENV:-local}; PORT=${PORT:-3000} EXTEND_ESLINT=true BROWSER=none react-scripts start'",
+        "start": "touch .env.local && cross-env PORT=3123 BROWSER=none react-scripts start'",
         "dev": "yarn start",
         "eject": "react-scripts eject",
         "test": "react-scripts test",
-        "prepackage": "rimraf lib ",
-        "package": "./node_modules/.bin/babel src/package -d .",
+        "prepackage": "rimraf lib",
+        "package": "babel src/package -d .",
         "postpackage": "cp-cli src/package/i18n i18n && cp-cli src/package/assets assets",
-        "test-build": "rimraf ./test-build && ./node_modules/.bin/babel src -d ./test_build",
-        "posttest-build": "rimraf ./test_build ./styles ",
+        "test-build": "rimraf test-build && babel src -d test_build",
+        "posttest-build": "rimraf test_build styles ",
         "build": "react-scripts build",
-        "build:messages": "NODE_ENV=production babel ./src >/dev/null",
+        "build:messages": "NODE_ENV=production babel src >/dev/null",
         "serve": "react-scripts build && serve build",
-        "manage:translations": "node ./translationRunner.js",
+        "manage:translations": "node translationRunner.js",
         "gh-deploy": "yarn build && gh-pages -d build",
         "version:beta": "npm version prerelease --preid=beta",
         "version:release": "npm version ${VERSION:-patch}"
@@ -80,6 +80,7 @@
         "babel-plugin-inline-react-svg": "^1.1.1",
         "babel-plugin-react-intl": "^7.0.0",
         "babel-plugin-transform-import-styles": "^0.0.11",
+        "cross-env": "^7.0.2",
         "eslint": "^6.8.0",
         "eslint-config-airbnb": "^18.0.1",
         "eslint-plugin-babel": "^5.3.0",
@@ -115,7 +116,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run test-build --scripts-prepend-node-path && CI=true yarn test && lint-staged"
+            "pre-commit": "npm run test-build --scripts-prepend-node-path && cross-env CI=true yarn test && lint-staged"
         }
     },
     "lint-staged": {

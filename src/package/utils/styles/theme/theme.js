@@ -3,11 +3,16 @@ import merge from 'lodash/merge';
 import cloneDeep from 'lodash/cloneDeep';
 import isArray from 'lodash/isArray';
 import DESIGN_SYSTEM_DEFAULT_PALETTE from '@welovedevs/ui/styles/palettes';
+import { buildShadedPalette } from '../../../components/banner/user_actions_row/customize_dialog/palettes_list/utils/build_shaded_palette';
+import { palettes } from '../../../components/banner/user_actions_row/customize_dialog/palettes_list/utils/palettes';
 
 import { THEME_SCHEMA } from './theme_schema';
 import { transformTheme } from './theme_transforms';
 
-const DEFAULT_PALETTE = Object.freeze(cloneDeep(DESIGN_SYSTEM_DEFAULT_PALETTE));
+const customizedPalette = getCustomizedPalette();
+const DEFAULT_PALETTE = Object.freeze(
+    mergeWith(cloneDeep(DESIGN_SYSTEM_DEFAULT_PALETTE), customizedPalette, mergeFunction)
+);
 
 export const DEFAULT_THEME = Object.freeze({
     palette: DEFAULT_PALETTE,
@@ -55,12 +60,21 @@ export const DEFAULT_THEME = Object.freeze({
 
 export const getRandomCardVariant = (theme) => Math.floor(Math.random() * theme.components?.cards?.variants?.length);
 
-const mergeFunction = (objValue, srcValue) => {
+function getCustomizedPalette() {
+    const [primary, secondary, tertiary] = palettes[7];
+    return {
+        primary: buildShadedPalette(primary),
+        secondary: buildShadedPalette(secondary),
+        tertiary: buildShadedPalette(tertiary)
+    };
+}
+
+function mergeFunction(objValue, srcValue) {
     if (isArray(objValue)) {
         return srcValue;
     }
     return merge(objValue, srcValue);
-};
+}
 
 export const buildTheme = (theme) => {
     const merged = mergeWith(cloneDeep(DEFAULT_THEME), theme, mergeFunction);

@@ -6,8 +6,6 @@ import { useIntl } from 'react-intl';
 
 import { List, ListItem, PopperCard, TextField, Typography } from '@welovedevs/ui';
 
-import { useGoogleMapsPredictions } from '../../hooks/location/use_google_maps_predictions';
-
 import { styles } from './location_field_style';
 import { translations } from './location_field_translations';
 
@@ -20,7 +18,7 @@ const LocationFieldComponent = ({ variant, onLocationSelected, value, clearOnSel
     const [input, setInput] = useState(value);
     const [preventBlur, setPreventBlur] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
-    const { predictions } = useGoogleMapsPredictions(input);
+    const predictions = [];
 
     useEffect(() => {
         setInput(value);
@@ -178,7 +176,7 @@ export const LocationField = ({
     fullWidth,
     classes: receivedClasses = {}
 }) => {
-    const { ready } = useGoogleMapsPredictions();
+    const ready = true;
     const classes = useStyles();
 
     if (!ready) {

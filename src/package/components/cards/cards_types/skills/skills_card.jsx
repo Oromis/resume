@@ -42,8 +42,8 @@ const SkillsCardComponent = ({ variant, side }) => {
             isEditingProfile={isEditing}
             isComplete={isComplete}
             sides={{
-                front: (props) => <SkillsFront {...props} />,
-                back: (props) => <SkillsBack {...props} />
+                front: (props) => <SkillsBack {...props} />
+                // back: (props) => <SkillsBack {...props} />
             }}
             editDialog={{
                 component: SkillsEditDialog,
