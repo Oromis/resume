@@ -1,9 +1,11 @@
 {
   "basics": {
     "name": "David",
+    "surname": "Bauske",
     "picture": "/images/David Bauske_VoltStorage_Portrait_SW.jpg",
     "title": "Head of IT",
     "summary": "Versatile software enthusiast",
+    "email": "david.bauske@googlemail.com",
     "location": {
       "countryCode": "DE",
       "city": "Munich"

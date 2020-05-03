@@ -9,7 +9,7 @@ import { styles } from './contact_info_row_styles';
 
 const useStyles = createUseStyles(styles);
 
-export const ContactInfoRow = ({ icon: Icon, translation, value }) => {
+export const ContactInfoRow = ({ icon: Icon, translation, value, link = false }) => {
     const classes = useStyles();
     const { formatMessage } = useIntl();
     return (
@@ -19,13 +19,8 @@ export const ContactInfoRow = ({ icon: Icon, translation, value }) => {
                     <Icon className={classes.icon} />
                 </button>
             </Tooltip>
-            <Typography
-                customClasses={{
-                    container: classes.typography
-                }}
-                color="light"
-            >
-                {value}
+            <Typography customClasses={{ container: classes.typography }} color="light">
+                {link ? <a href={typeof link === 'string' ? `${link}:${value}` : value}>{value}</a> : value}
             </Typography>
         </div>
     );

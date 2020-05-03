@@ -53,7 +53,7 @@ export const UserInformations = () => {
                     variant="h3"
                     component="h3"
                 >
-                    {data.basics?.name}
+                    {data.basics?.name} {data.basics?.surname}
                 </Typography>
                 <Typography
                     customClasses={{

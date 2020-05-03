@@ -52,19 +52,23 @@ const ContactInfosRows = ({ contactInformations, classes }) => {
         <div className={classes.contactInfosRows}>
             {Object.entries(contactInformations)
                 .filter(([contactInformationId]) => !CONTACT_INFOS_DATA[contactInformationId]?.onlyDialog)
-                .map(([contactInformationId, value]) => (
-                    <ContactInfoRow
-                        key={`contact_information_row_${contactInformationId}`}
-                        value={value}
-                        {...['icon', 'translation'].reduce(
-                            (acc, key) => ({
-                                ...acc,
-                                [key]: CONTACT_INFOS_DATA?.[contactInformationId]?.[key]
-                            }),
-                            {}
-                        )}
-                    />
-                ))}
+                .map(
+                    ([contactInformationId, value]) =>
+                        value && (
+                            <ContactInfoRow
+                                key={`contact_information_row_${contactInformationId}`}
+                                value={value}
+                                link={CONTACT_INFOS_DATA[contactInformationId]?.link}
+                                {...['icon', 'translation'].reduce(
+                                    (acc, key) => ({
+                                        ...acc,
+                                        [key]: CONTACT_INFOS_DATA?.[contactInformationId]?.[key]
+                                    }),
+                                    {}
+                                )}
+                            />
+                        )
+                )}
         </div>
     );
 };

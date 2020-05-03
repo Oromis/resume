@@ -14,11 +14,13 @@ export const CONTACT_INFOS_DATA = Object.freeze({
     phone: {
         path: 'basics.phone',
         translation: translations.phone,
-        icon: PhoneIcon
+        icon: PhoneIcon,
+        link: 'tel'
     },
     email: {
         path: 'basics.email',
         translation: translations.email,
-        icon: EmailIcon
+        icon: EmailIcon,
+        link: 'mailto'
     }
 });
