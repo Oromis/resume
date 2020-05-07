@@ -214,63 +214,6 @@
     },
     {
       "date": {
-        "month": 9,
-        "year": 2017
-      },
-      "description": "Microcontroller firmware for VoltStorage's smart home batteries. Based on Espressif's ESP32 chip, programmed in C++. IoT project with low-level hardware interaction, secure server communication & over-the-air updates on a severely resource-constrained device (we're talking 520 kB of RAM).\n\nMy role: Architect, Lead Engineer",
-      "id": "17996be7-4b2e-4ece-bc46-bcadb463b5af",
-      "name": "VoltStorage Firmware",
-      "endDate": "2017-10-01"
-    },
-    {
-      "date": {
-        "month": 4,
-        "year": 2015
-      },
-      "description": "Battery Management System for a high-voltage tractive system battery used in an electric race car. Based on an STM32 microcontroller, this system continuously monitors voltage & temperature of every single one of the 140 cells in the battery pack. Emergency shutdown functionality. Manages balanced battery charging. Calculates the state of charge.\n\nMy role: Lead Software Developer",
-      "id": "4f9a5dcf-f80c-4137-a3b1-54d816a4711b",
-      "name": "Elefant Racing BMS",
-      "endDate": "2015-05-01"
-    },
-    {
-      "date": {
-        "month": 6,
-        "year": 2014
-      },
-      "description": "Software for an ECU (electronics control unit) of an electric race car. Based on a Linux-powered single-board computer this software manages all vehicle functions from throttle input to inverter output. Real time capable with 1000 Hz sample rate. Live telemetry system via WiFi & ZigBee radio. Sensor input & vehicle dynamics controls (recuperation, traction control, launch control).\n\nThis was my Bachelor Thesis. I was the sole developer & designer.",
-      "id": "a05d3908-285a-4f32-8f51-796394a51fbc",
-      "name": "Elefant Racing Ebox",
-      "endDate": "2014-07-01"
-    },
-    {
-      "date": {
-        "month": 0,
-        "year": 2018
-      },
-      "description": "A server-side application providing a REST-API plus a WebSocket API for real-time data transfer. Acts as a management application for the company's fleet of smart home batteries. Manages per-battery settings, provides over-the-air updates, receives, processes and stores real-time data from all products (1 Hz), aggregates statistics and much more.\n\nNode.js-based. Uses MongoDB for real-time data & PostgreSQL for everything else.\n\nMy role: Architect, Lead Engineer",
-      "id": "bff392c7-1e64-4d12-9538-78a891c4d263",
-      "index": 1,
-      "name": "VoltStorage Backend",
-      "endDate": "2018-01-01"
-    },
-    {
-      "date": {
-        "month": 3,
-        "year": 2015
-      },
-      "description": "Developed an online character sheet for a Pen & Paper role playing system set in the world of Bethesda's \"Elder Scrolls: Morrowind\". \n\nTech: Ruby on Rails, AngularJS. I am the sole developer & maintainer",
-      "id": "d26669da-3c26-4f87-a212-377825e2b020",
-      "images": [
-        {
-          "url": "https://cdn.filestackcontent.com/4iHBbkmQjKRTZPOLfePZ"
-        }
-      ],
-      "link": "https://morrowind.bauske.org/",
-      "name": "Morrowind Pen & Paper",
-      "endDate": "2015-04-01"
-    },
-    {
-      "date": {
         "month": 10,
         "year": 2019
       },
@@ -298,6 +241,63 @@
       "link": "https://app.voltstorage.com/",
       "name": "VoltStorage App",
       "endDate": "2019-08-01"
+    },
+    {
+      "date": {
+        "month": 0,
+        "year": 2018
+      },
+      "description": "A server-side application providing a REST-API plus a WebSocket API for real-time data transfer. Acts as a management application for the company's fleet of smart home batteries. Manages per-battery settings, provides over-the-air updates, receives, processes and stores real-time data from all products (1 Hz), aggregates statistics and much more.\n\nNode.js-based. Uses MongoDB for real-time data & PostgreSQL for everything else.\n\nMy role: Architect, Lead Engineer",
+      "id": "bff392c7-1e64-4d12-9538-78a891c4d263",
+      "index": 1,
+      "name": "VoltStorage Backend",
+      "endDate": "2018-01-01"
+    },
+    {
+      "date": {
+        "month": 9,
+        "year": 2017
+      },
+      "description": "Microcontroller firmware for VoltStorage's smart home batteries. Based on Espressif's ESP32 chip, programmed in C++. IoT project with low-level hardware interaction, secure server communication & over-the-air updates on a severely resource-constrained device (we're talking 520 kB of RAM).\n\nMy role: Architect, Lead Engineer",
+      "id": "17996be7-4b2e-4ece-bc46-bcadb463b5af",
+      "name": "VoltStorage Firmware",
+      "endDate": "2017-10-01"
+    },
+    {
+      "date": {
+        "month": 4,
+        "year": 2015
+      },
+      "description": "Battery Management System for a high-voltage tractive system battery used in an electric race car. Based on an STM32 microcontroller, this system continuously monitors voltage & temperature of every single one of the 140 cells in the battery pack. Emergency shutdown functionality. Manages balanced battery charging. Calculates the state of charge.\n\nMy role: Lead Software Developer",
+      "id": "4f9a5dcf-f80c-4137-a3b1-54d816a4711b",
+      "name": "Elefant Racing BMS",
+      "endDate": "2015-05-01"
+    },
+    {
+      "date": {
+        "month": 3,
+        "year": 2015
+      },
+      "description": "Developed an online character sheet for a Pen & Paper role playing system set in the world of Bethesda's \"Elder Scrolls: Morrowind\". \n\nTech: Ruby on Rails, AngularJS. I am the sole developer & maintainer",
+      "id": "d26669da-3c26-4f87-a212-377825e2b020",
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/4iHBbkmQjKRTZPOLfePZ"
+        }
+      ],
+      "link": "https://morrowind.bauske.org/",
+      "name": "Morrowind Pen & Paper",
+      "endDate": "2015-04-01"
+    },
+    {
+      "date": {
+        "month": 6,
+        "year": 2014
+      },
+      "description": "Software for an ECU (electronics control unit) of an electric race car. Based on a Linux-powered single-board computer this software manages all vehicle functions from throttle input to inverter output. Real time capable with 1000 Hz sample rate. Live telemetry system via WiFi & ZigBee radio. Sensor input & vehicle dynamics controls (recuperation, traction control, launch control).\n\nThis was my Bachelor Thesis. I was the sole developer & designer.",
+      "id": "a05d3908-285a-4f32-8f51-796394a51fbc",
+      "name": "Elefant Racing Ebox",
+      "endDate": "2014-07-01"
     },
     {
       "date": {

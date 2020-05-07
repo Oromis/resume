@@ -29,9 +29,10 @@ const ProjectsFrontComponent = ({ data, handleAddButtonClick }) => {
     ]);
 
     const [variant] = useCardVariant();
-    const imageSrc = useMemo(() => data.projects?.[0]?.images?.url ?? DEFAULT_PROJECT_IMAGE, [
-        data.projects?.[0]?.images
-    ]);
+    const imageSrc = useMemo(
+        () => data.projects.find((p) => p.images?.length > 0)?.images[0].url ?? DEFAULT_PROJECT_IMAGE,
+        [data.projects]
+    );
     const alt = data.projects?.[0]?.title;
 
     const projectTitle = useMemo(() => {
@@ -57,6 +58,7 @@ const ProjectsFrontComponent = ({ data, handleAddButtonClick }) => {
                 <Content
                     hasProject={hasProject}
                     projectTitle={projectTitle}
+                    projects={data.projects}
                     handleAddButtonClick={handleAddButtonClick}
                     classes={classes}
                 />
@@ -78,7 +80,7 @@ const ProjectsFrontComponent = ({ data, handleAddButtonClick }) => {
     );
 };
 
-const Content = ({ hasProject, projectTitle, handleAddButtonClick, classes }) => {
+const Content = ({ hasProject, projectTitle, projects, handleAddButtonClick, classes }) => {
     if (hasProject) {
         return (
             <Typography variant="h2" component="h2" customClasses={{ container: classes.text }}>
@@ -86,10 +88,10 @@ const Content = ({ hasProject, projectTitle, handleAddButtonClick, classes }) =>
                     id="Projects.front.title"
                     defaultMessage="My <emoji>♥️</emoji> project : "
                     values={{
+                        count: projects.length,
                         emoji: (value) => <Twemoji svg text={value} />
                     }}
                 />
-                {projectTitle}
             </Typography>
         );
     }
