@@ -116,7 +116,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run test-build --scripts-prepend-node-path && cross-env CI=true yarn test && lint-staged"
+            "pre-commit": "cross-env CI=true yarn test && lint-staged"
         }
     },
     "lint-staged": {
