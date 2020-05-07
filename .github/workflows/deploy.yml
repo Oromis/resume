@@ -27,6 +27,7 @@ jobs:
       - run: mkdir -p ~/.ssh
       - run: ssh-keyscan -H bauske.org >> ~/.ssh/known_hosts
       - run: chmod 600 ~/.ssh/known_hosts
+      - run: chomd 600 id_rsa
       - run: scp -i id_rsa david-bauske-resume.zip deploy-bot@bauske.org:/var/www/resume
       - run: ssh -i id_rsa deploy-bot@bauske.org "unzip /var/www/resume/david-bauske-resume.zip -d /var/www/resume"
       - run: rm id_rsa
