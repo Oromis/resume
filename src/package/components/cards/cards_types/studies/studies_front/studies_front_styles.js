@@ -11,6 +11,9 @@ export const styles = (theme) => {
         logo: {
             marginBottom: spacing * 4
         },
+        uniLogo: {
+            width: '40%'
+        },
         typography: {
             overflow: 'hidden',
             minHeight: 'fit-content',
