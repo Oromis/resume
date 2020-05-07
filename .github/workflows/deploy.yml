@@ -18,6 +18,8 @@ jobs:
       - run: npm i -g yarn
       - run: yarn install
       - run: yarn run build
+        env:
+          - CI: false
       - run: zip -r david-bauske-resume.zip build
       - run: echo "$BAUSKE_ORG_DEPLOY_KEY" > id_rsa
       - run: scp -i id_rsa david-bauske-resume.zip deploy-bot@bauske.org:/var/www/resume
