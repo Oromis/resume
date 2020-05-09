@@ -11,7 +11,7 @@ export const styles = (theme) => {
         }),
         typography: ({ variant, overrideColor }) => ({
             color: getHexFromPaletteColor(theme, overrideColor || getColorsFromCardVariant(theme, variant).color),
-            fontSize: 48,
+            fontSize: 42,
             lineHeight: '48px',
             fontWeight: 700
         })

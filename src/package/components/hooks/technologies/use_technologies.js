@@ -3,6 +3,8 @@ import { useContext, useEffect } from 'react';
 import { TECHNOLOGIES_RECEIVED, TECHNOLOGIES_STARTED } from '../../../store/technologies/technologies_actions_types';
 import { StaticDataContext, StoreContext } from '../../../utils/context/contexts';
 
+let status = null;
+
 const DEFAULT_OBJECT = {};
 export const useTechnologies = () => {
     const {
@@ -15,8 +17,9 @@ export const useTechnologies = () => {
             dispatch({ type: TECHNOLOGIES_RECEIVED, technologies: DEFAULT_OBJECT });
             return;
         }
-        if (technologies === null && endpoints.devicons) {
+        if (technologies === null && endpoints.devicons && status == null) {
             dispatch({ type: TECHNOLOGIES_STARTED });
+            status = TECHNOLOGIES_STARTED;
             // eslint-disable-next-line no-undef
             fetch(endpoints.devicons)
                 .then((res) => {
@@ -25,12 +28,14 @@ export const useTechnologies = () => {
                     }
                     throw new Error(`${res.status} ${res.statusText}`);
                 })
-                .then((fetchedTechnologies) =>
-                    dispatch({ type: TECHNOLOGIES_RECEIVED, technologies: fetchedTechnologies })
-                )
+                .then((fetchedTechnologies) => {
+                    status = TECHNOLOGIES_RECEIVED;
+                    return dispatch({ type: TECHNOLOGIES_RECEIVED, technologies: fetchedTechnologies });
+                })
                 .catch((e) => {
                     console.error('Failed to fetch technologies', e);
-                    dispatch({ type: TECHNOLOGIES_RECEIVED, technologies: DEFAULT_OBJECT });
+                    status = TECHNOLOGIES_RECEIVED;
+                    return dispatch({ type: TECHNOLOGIES_RECEIVED, technologies: DEFAULT_OBJECT });
                 });
         }
     }, [technologies]);

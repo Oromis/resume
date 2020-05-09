@@ -18,5 +18,10 @@ export const styles = (theme) => ({
         width: '100%',
         margin: `0px ${theme.miscellaneous.spacing * 5}px`,
         paddingBottom: theme.miscellaneous.spacing * 2
+    },
+    chartSwitch: {
+        position: 'absolute',
+        top: 24,
+        right: 24
     }
 });

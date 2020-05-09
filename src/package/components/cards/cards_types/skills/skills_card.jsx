@@ -1,7 +1,6 @@
 import React, { useCallback, useContext, useMemo } from 'react';
 
 import { ProfileCard } from '../../../commons/profile_card/profile_card';
-import { SkillsFront } from './skills_front/skills_front';
 import { SkillsBack } from './skills_back/skills_back';
 import { SkillsEditDialog } from './skills_edit_dialog/skills_edit_dialog';
 
@@ -43,7 +42,6 @@ const SkillsCardComponent = ({ variant, side }) => {
             isComplete={isComplete}
             sides={{
                 front: (props) => <SkillsBack {...props} />
-                // back: (props) => <SkillsBack {...props} />
             }}
             editDialog={{
                 component: SkillsEditDialog,

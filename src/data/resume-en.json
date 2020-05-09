@@ -77,67 +77,78 @@
       "id": "d46273d2-de15-435a-b01a-48b1ac34c719",
       "name": "C++",
       "position": 0,
-      "value": 90
+      "value": 92,
+      "passion": 99
     },
     {
       "id": "9b58d35c-663e-4acc-ba8d-fe2e66f6e41b",
       "name": "NodeJS",
       "position": 1,
-      "value": 80
+      "value": 77,
+      "passion": 88
     },
     {
       "id": "307b6b25-edb1-453d-a261-8644bed37caa",
       "name": "React",
       "position": 2,
-      "value": 80
+      "value": 81,
+      "passion": 78
     },
     {
       "id": "f771f40a-d639-40e6-9daf-0007732b888d",
       "name": "Javascript",
       "position": 3,
-      "value": 95
+      "value": 100,
+      "passion": 95
+    },
+    {
+      "id": "3b98abd4-20f0-4d91-ac6a-8f182d032183",
+      "name": "Embedded",
+      "position": 10,
+      "value": 89,
+      "passion": 88
     },
     {
       "id": "d6cb9977-c08a-4d8d-9cd4-1247a60c7e5e",
       "name": "MongoDB",
       "position": 4,
-      "value": 80
+      "value": 70,
+      "passion": 74
     },
     {
       "id": "9fa4355e-9e65-47bd-8470-7b2648671804",
       "name": "SQL",
       "position": 5,
-      "value": 80
+      "value": 83,
+      "passion": 65
     },
     {
       "id": "e43f4b29-ed38-4c3c-b57b-b609e5058014",
       "name": "Ruby",
       "position": 6,
-      "value": 70
+      "value": 65,
+      "passion": 90
     },
     {
       "id": "95413675-0e6b-45d6-b617-427d9920c980",
       "name": "Python",
       "position": 7,
-      "value": 70
+      "value": 60,
+      "passion": 55
     },
     {
       "id": "f599dbee-6131-471f-bbf6-c005f7c2ee06",
       "name": "Java",
       "position": 8,
-      "value": 90
+      "value": 90,
+      "passion": 30
     },
     {
       "id": "bad1f3e2-57f6-408e-a5ce-89386b091b32",
       "name": "C",
       "position": 9,
-      "value": 90
-    },
-    {
-      "id": "3b98abd4-20f0-4d91-ac6a-8f182d032183",
-      "name": "Kotlin",
-      "position": 10,
-      "value": 40
+      "value": 90,
+      "passion": 50
     }
   ],
   "languages": [

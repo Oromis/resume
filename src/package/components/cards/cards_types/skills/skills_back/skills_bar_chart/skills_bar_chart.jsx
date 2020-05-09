@@ -2,7 +2,7 @@ import chroma from 'chroma-js';
 import React, { useContext, useMemo } from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
 import { animated } from 'react-spring';
-import { Bar, BarChart, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { DEFAULT_TECHNO_HANDLE } from '../../../../../../utils/icons';
 import { getColorsFromCardVariant, getHexFromPaletteColor } from '../../../../../../utils/styles/styles_utils';
 import { useTechnologies } from '../../../../../hooks/technologies/use_technologies';
@@ -63,15 +63,11 @@ const SkillsBarChart = ({ data, variant }) => {
             variantColors
         };
     }, [theme, variant]);
-    const colorPalette = useMemo(
-        () => Array.from({ length: data.length }, (v, k) => chroma.mix(contentColor, backgroundColor, k / 15).hex()),
-        [contentColor, backgroundColor]
-    );
 
     return (
         <ColorProvider value={{ backgroundColor, theme, variantColors }}>
             <animated.div className={classes.wrapper}>
-                <ResponsiveContainer height="100%" width="100%">
+                <ResponsiveContainer minHeight={374} width="100%">
                     <BarChart data={data} layout="vertical" margin={margin} maxBarSize={8}>
                         <YAxis
                             dataKey="name"
