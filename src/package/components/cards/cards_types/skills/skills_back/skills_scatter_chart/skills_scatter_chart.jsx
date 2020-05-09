@@ -2,7 +2,7 @@ import chroma from 'chroma-js';
 import React, { useContext, useMemo } from 'react';
 import { useIntl } from 'react-intl';
 import { createUseStyles, useTheme } from 'react-jss';
-import { ScatterChart, LabelList, ResponsiveContainer, XAxis, YAxis, Scatter, Tooltip, ZAxis } from 'recharts';
+import { ScatterChart, ResponsiveContainer, XAxis, YAxis, Scatter, Tooltip, ZAxis } from 'recharts';
 import { DEFAULT_TECHNO_HANDLE } from '../../../../../../utils/icons';
 import { getColorsFromCardVariant, getHexFromPaletteColor } from '../../../../../../utils/styles/styles_utils';
 import { useTechnologies } from '../../../../../hooks/technologies/use_technologies';
@@ -56,6 +56,12 @@ const SkillTick = ({ x, y, payload, fill }) => {
     const Emoji = payload.value === 0 ? ThinkingFace : MuscleFlex;
     x -= size / 2;
     return <Emoji x={x} y={y} width={size} height={size} stroke={fill} fill={fill} />;
+};
+
+const CustomTooltip = ({ payload }) => {
+    const content = payload.find((pl) => pl.name === 'name')?.value;
+    const style = { backgroundColor: '#000000A0', borderRadius: 5, padding: '6px 16px' };
+    return <div style={style}>{content}</div>;
 };
 
 const useStyles = createUseStyles(styles);
@@ -119,8 +125,7 @@ const SkillsScatterChart = ({ data, variant }) => {
                             ticks={[0, 100]}
                         />
                         <ZAxis type="category" dataKey="name" />
-                        <Tooltip isAnimationActive={false} />
-                        {/*content={IconLabel}*/}
+                        <Tooltip isAnimationActive={false} content={CustomTooltip} />
                         <Scatter data={mergedData} fill={contentColor} shape={IconLabel} />
                     </ScatterChart>
                 </ResponsiveContainer>
