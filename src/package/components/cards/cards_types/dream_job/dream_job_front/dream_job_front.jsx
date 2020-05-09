@@ -10,7 +10,7 @@ import { ProfileCardFrontTypography } from '../../../../commons/profile_card/pro
 import { ProfileCardActions } from '../../../../commons/profile_card/profile_card_actions/profile_card_actions';
 import { ProfileCardButton } from '../../../../commons/profile_card/profile_card_button/profile_card_button';
 
-import { ReactComponent as HomeLogo } from '../../../../../assets/icons/home.svg';
+import { ReactComponent as HomeLogo } from '../../../../../assets/icons/briefcase.svg';
 
 import { useCardSide } from '../../../../hooks/profile_card_hooks/use_card_side';
 import { REMOTE_FREQUENCY } from '../../../../../utils/enums/remote/remote_utils';
@@ -53,14 +53,7 @@ const DreamJobFrontComponent = ({ data }) => {
             <>
                 <ProfileCardFrontVector customClasses={{ container: classes.logo }} vector={HomeLogo} />
                 <ProfileCardFrontTypography classes={{ container: classes.typography }}>
-                    <FormattedMessage
-                        id="DreamJob.Front.Cities"
-                        defaultMessage="I want to work in {cities}{andMore}"
-                        values={{
-                            cities: places?.[0]?.name,
-                            andMore
-                        }}
-                    />
+                    <FormattedMessage id="DreamJob.Front.Headline" defaultMessage="My Dream Job" />
                 </ProfileCardFrontTypography>
             </>
         );

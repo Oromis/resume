@@ -343,9 +343,10 @@
       ],
       "perks": {
         "challenge": true,
-        "mood": true,
-        "responsabilities": true,
-        "salary": true
+        "responsibilities": true,
+        "leadership": true,
+        "salary": true,
+        "mood": true
       },
       "remoteFrequency": "occasionally"
     },

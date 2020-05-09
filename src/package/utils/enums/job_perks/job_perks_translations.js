@@ -21,13 +21,17 @@ export const jobPerksTranslations = defineMessages({
         id: 'Developer.JobPerks.training',
         defaultMessage: 'Training'
     },
-    responsabilities: {
-        id: 'Developer.JobPerks.resopnsabilities',
+    responsibilities: {
+        id: 'Developer.JobPerks.responsibilities',
         defaultMessage: 'Responsibilities'
     },
     perks: {
         id: 'Developer.JobPerks.perks',
         defaultMessage: 'Perks (meal, tickets,... )'
+    },
+    leadership: {
+        id: 'Developer.JobPerks.leadership',
+        defaultMessage: 'Leading / Senior role (e.g. Team Lead, Architect)'
     },
     others: {
         id: 'Developer.JobPerks.other',

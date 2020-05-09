@@ -32,31 +32,6 @@ const DreamJobBackComponent = ({ data }) => {
 
     return (
         <ProfileCardAnimatedBack title={<FormattedMessage id="Dreamjob.Back.Title" defaultMessage="Dream job" />}>
-            {existsAndNotEmpty(places) && (
-                <ProfileCardSection>
-                    <DreamJobLocations places={places} remoteFrequency={remoteFrequency} classes={classes} />
-                </ProfileCardSection>
-            )}
-            {existsAndNotEmpty(isFreelance ? averageDailyRate : salary) &&
-                (isFreelance ? averageDailyRate !== '0' : salary !== '0') && (
-                    <ProfileCardSection>
-                        <DreamJobSalarySectionContent
-                            contractTypes={contractTypes}
-                            averageDailyRate={averageDailyRate}
-                            salary={salary}
-                        />
-                    </ProfileCardSection>
-                )}
-            {existsAndNotEmpty(contractTypes) && (
-                <ProfileCardSection>
-                    <ProfileCardSectionTitle>
-                        <FormattedMessage id="Dreamjob.Back.ContractTypes.Title" defaultMessage="Contract types" />
-                    </ProfileCardSectionTitle>
-                    <ProfileCardSectionText>
-                        <ContractType contractTypes={contractTypes} />
-                    </ProfileCardSectionText>
-                </ProfileCardSection>
-            )}
             {existsAndNotEmpty(perks) &&
                 typeof perks === 'object' &&
                 Object.values(perks).some((value) => existsAndNotEmpty(value)) && (
@@ -70,6 +45,31 @@ const DreamJobBackComponent = ({ data }) => {
                         <ProfileCardSectionText>
                             <DreamJobPerks perks={perks} />
                         </ProfileCardSectionText>
+                    </ProfileCardSection>
+                )}
+            {existsAndNotEmpty(contractTypes) && (
+                <ProfileCardSection>
+                    <ProfileCardSectionTitle>
+                        <FormattedMessage id="Dreamjob.Back.ContractTypes.Title" defaultMessage="Contract types" />
+                    </ProfileCardSectionTitle>
+                    <ProfileCardSectionText>
+                        <ContractType contractTypes={contractTypes} />
+                    </ProfileCardSectionText>
+                </ProfileCardSection>
+            )}
+            {existsAndNotEmpty(places) && (
+                <ProfileCardSection>
+                    <DreamJobLocations places={places} remoteFrequency={remoteFrequency} classes={classes} />
+                </ProfileCardSection>
+            )}
+            {existsAndNotEmpty(isFreelance ? averageDailyRate : salary) &&
+                (isFreelance ? averageDailyRate !== '0' : salary !== '0') && (
+                    <ProfileCardSection>
+                        <DreamJobSalarySectionContent
+                            contractTypes={contractTypes}
+                            averageDailyRate={averageDailyRate}
+                            salary={salary}
+                        />
                     </ProfileCardSection>
                 )}
             {existsAndNotEmpty(currentJobIssues) && (
