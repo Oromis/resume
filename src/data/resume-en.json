@@ -194,7 +194,7 @@
       "name": "Biking"
     },
     {
-      "gifUrl": "https://media3.giphy.com/media/cgCMnZr84zE40/giphy.gif?cid=e3b0c4425e28cb7f71858f597049eb0ed601755b271e6041&rid=giphy.gif",
+      "gifUrl": "https://media.giphy.com/media/W5U4LNiJPPVvPbbQlU/giphy.gif",
       "id": "69774d62-8fdf-48cb-9d03-4744f966550f",
       "index": 3,
       "name": "SimRacing"
@@ -365,5 +365,13 @@
     },
     "sound": {},
     "interestedBy": "Rust, Julia, VHDL"
+  },
+  "imprint": {
+    "name": "David Bauske",
+    "address": "Alfred-Schmidt-Str. 2",
+    "zip": "81379",
+    "city": "München",
+    "country": "Germany",
+    "email": "david.bauske@googlemail.com"
   }
 }

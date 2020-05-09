@@ -1,3 +1,6 @@
+import chroma from 'chroma-js';
+import { getFooterColor } from '../../styles/color_utils';
+
 import { createScreenWidthMediaQuery, getHexFromPaletteColor } from '../../utils/styles/styles_utils';
 
 export const styles = (theme) => {
@@ -13,6 +16,9 @@ export const styles = (theme) => {
     );
 
     return {
+        wrapper: {
+            width: '100%'
+        },
         container: {
             width: '100%',
             backgroundColor: getHexFromPaletteColor(theme, 'primary'),
@@ -26,6 +32,24 @@ export const styles = (theme) => {
             [QUERY_BETWEEN_SMALL_EXTRA_SMALL]: {
                 flexDirection: 'column'
             }
+        },
+        legal: {
+            backgroundColor: chroma(getHexFromPaletteColor(theme, 'primary')).darken().css(),
+            color: getFooterColor(theme),
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            padding: [20, 0]
+        },
+        legalBlock: {
+            flexGrow: 1,
+            maxWidth: 470,
+            margin: 16,
+            padding: [0, 20]
+        },
+        cookieEmoji: {
+            display: 'inline-block',
+            verticalAlign: 'middle'
         },
         logoLink: {
             display: 'flex'
