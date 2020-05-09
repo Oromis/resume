@@ -8,6 +8,9 @@ import { Typography } from '@welovedevs/ui';
 import { ProfileCardPaddedFront } from '../../../../commons/profile_card/profile_card_padded_front/profile_card_padding_front';
 import { CenterContentContainer } from '../../../../commons/center_content_container/center_content_container';
 import { ProfileCardFrontTypography } from '../../../../commons/profile_card/profile_card_front_typography/profile_card_front_typography';
+import { ProfileCardTitle } from '../../../../commons/profile_card/profile_card_title/profile_card_title';
+import { useCardVariant } from '../../../../hooks/profile_card_hooks/use_card_variant';
+import SkillsScatterChart from '../../skills/skills_back/skills_scatter_chart/skills_scatter_chart';
 
 import { styles } from './interested_by_front_styles';
 import { useCardSide } from '../../../../hooks/profile_card_hooks/use_card_side';
@@ -18,99 +21,28 @@ import { SIDES } from '../../../../commons/profile_card/profile_card_side/side';
 
 const useStyles = createUseStyles(styles);
 
-const InterestedByFrontComponent = ({
-    data: { interestedBy },
-    dismissButton,
-    handleAddButtonClick,
-    overrideColor,
-    customClasses = {}
-}) => {
+const InterestedByFrontComponent = ({ data: { skills }, overrideColor, customClasses = {} }) => {
     const classes = useStyles({ overrideColor });
-    const [side, setSide] = useCardSide();
-
-    const [isTypographyTruncated, setIsTypographyTruncated] = useState(true);
-
-    const handleButtonClick = useCallback(() => setSide(side === SIDES.FRONT ? SIDES.BACK : SIDES.FRONT), [
-        side,
-        setSide
-    ]);
-
     return (
-        <>
-            <ProfileCardPaddedFront customClasses={{ container: cn(classes.container, customClasses.container) }}>
-                <CenterContentContainer>
-                    <Content
-                        {...{
-                            interestedBy,
-                            setIsTypographyTruncated,
-                            handleAddButtonClick,
-                            overrideColor,
-                            classes,
-                            customClasses
-                        }}
-                    />
-                </CenterContentContainer>
-            </ProfileCardPaddedFront>
-            {isTypographyTruncated && !dismissButton && interestedBy && (
-                <ProfileCardActions>
-                    <ProfileCardButton onClick={handleButtonClick}>
-                        <FormattedMessage id="InterestedBy.front.action" defaultMessage="See all" />
-                    </ProfileCardButton>
-                </ProfileCardActions>
-            )}
-        </>
+        <div className={classes.scroller}>
+            <ProfileCardTitle>
+                <FormattedMessage id="Skills.scatter.heading" defaultMessage="Skills" />
+            </ProfileCardTitle>
+            <Content
+                {...{
+                    skills,
+                    overrideColor,
+                    classes,
+                    customClasses
+                }}
+            />
+        </div>
     );
 };
 
-const Content = ({
-    interestedBy,
-    setIsTypographyTruncated,
-    handleAddButtonClick,
-    overrideColor,
-    classes,
-    customClasses
-}) => {
-    const typographyReference = useRef();
-
-    useEffect(() => {
-        const element = typographyReference.current;
-        if (element?.offsetHeight > element?.scrollHeight - 1) {
-            setIsTypographyTruncated(false);
-        }
-    }, [typographyReference.current]);
-
-    if (!interestedBy) {
-        return (
-            <div className={classes.noInterested}>
-                <Typography variant="h3" component="h3" customClasses={{ container: classes.noInterestedTypography }}>
-                    <FormattedMessage
-                        id="InterestedBy.front.noInterested"
-                        defaultMessage="Vous n'avez pas encore ajouté de techno qui vous intéresse !"
-                    />
-                </Typography>
-                <NoDataButton
-                    handleAddButtonClick={handleAddButtonClick}
-                    classes={{
-                        container: classes.addButton
-                    }}
-                >
-                    <FormattedMessage id="InterestedBy.noInterested.buttonLabel" defaultMessage="Ajouter" />
-                </NoDataButton>
-            </div>
-        );
-    }
-    return (
-        <ProfileCardFrontTypography
-            ref={typographyReference}
-            classes={{
-                container: cn(classes.typography, customClasses.typography)
-            }}
-            overrideColor={overrideColor}
-        >
-            <FormattedMessage id="InterestedBy.front.content" defaultMessage="Interested in:" />
-            <div className={classes.interestedByValue}>{interestedBy}</div>
-        </ProfileCardFrontTypography>
-    );
+const Content = ({ skills, overrideColor, classes, customClasses }) => {
+    const [variant] = useCardVariant();
+    return <SkillsScatterChart variant={variant} data={skills ?? []} />;
 };
 
 export const InterestedByFront = memo(InterestedByFrontComponent);

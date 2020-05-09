@@ -1,8 +1,9 @@
 import React, { useCallback, useContext, useMemo } from 'react';
 
 import { ProfileCard } from '../../../commons/profile_card/profile_card';
+import { mapSkillsFromJsonResume } from '../skills/data/mapping';
+import { validateSkillsComplete } from '../skills/data/validator';
 import { InterestedByFront } from './interested_by_front/interested_by_front';
-import { InterestedByBack } from './interested_by_back/interested_by_back';
 import { FlatObjectToJsonResume, JsonResumeToFlatObject } from '../../utils/data_mapping';
 import { InterestedByEditDialog } from './interested_by_edit_dialog/interested_by_edit_dialog';
 
@@ -15,7 +16,7 @@ const InterestedByCardComponent = ({ variant, side }) => {
     const [mode] = useMode();
 
     const { data, onEdit, isEditing } = useContext(DeveloperProfileContext);
-    const mappedData = useMemo(() => JsonResumeToFlatObject(data, interestedByMapping), [data]);
+    const mappedData = useMemo(() => mapSkillsFromJsonResume(data), [data]);
 
     const onDialogEdited = useCallback(
         (editedData) => {
@@ -24,7 +25,7 @@ const InterestedByCardComponent = ({ variant, side }) => {
         [onEdit]
     );
 
-    const isComplete = useMemo(() => validateInterestedByComplete(mappedData), [mappedData]);
+    const isComplete = useMemo(() => validateSkillsComplete(mappedData), [mappedData]);
 
     if (!isComplete && mode !== 'edit') {
         return null;
@@ -37,8 +38,7 @@ const InterestedByCardComponent = ({ variant, side }) => {
                 isComplete={isComplete}
                 isEditingProfile={isEditing}
                 sides={{
-                    front: (props) => <InterestedByFront {...props} />,
-                    back: (props) => <InterestedByBack {...props} />
+                    front: (props) => <InterestedByFront {...props} />
                 }}
                 editDialog={{
                     component: InterestedByEditDialog,

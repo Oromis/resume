@@ -1,4 +1,9 @@
-import { createScreenWidthMediaQuery, getHexFromPaletteColor } from '../../../../../utils/styles/styles_utils';
+import {
+    createScreenWidthMediaQuery,
+    getColorsFromCardVariant,
+    getHexFromPaletteColor,
+    withCustomVerticalScrollbar
+} from '../../../../../utils/styles/styles_utils';
 
 export const styles = (theme) => {
     const {
@@ -12,6 +17,16 @@ export const styles = (theme) => {
             ...(overrideColor && {
                 color: getHexFromPaletteColor(theme, overrideColor)
             })
+        }),
+        scroller: ({ variant }) => ({
+            display: 'flex',
+            flexWrap: 'wrap',
+            overflowX: 'hidden',
+            overflowY: 'auto',
+            height: '100%',
+            ...withCustomVerticalScrollbar(
+                getHexFromPaletteColor(theme, getColorsFromCardVariant(theme, variant).backBackgroundColor)
+            )
         }),
         interestedByValue: {
             marginTop: spacing * 4

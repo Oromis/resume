@@ -10,7 +10,7 @@ import { styles } from './skills_bar_chart_styles';
 
 const marginSize = 8;
 const iconSize = 24;
-const margin = { top: marginSize, right: marginSize + iconSize, bottom: marginSize * 2, left: marginSize };
+const margin = { top: marginSize, right: marginSize * 3 + iconSize, bottom: marginSize * 2, left: marginSize };
 
 const ColorContext = React.createContext({});
 const ColorProvider = ColorContext.Provider;

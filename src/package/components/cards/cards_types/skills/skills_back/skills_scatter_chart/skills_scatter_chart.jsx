@@ -98,7 +98,7 @@ const SkillsScatterChart = ({ data, variant }) => {
     return (
         <ColorProvider value={{ backgroundColor, theme, variantColors }}>
             <div className={classes.wrapper}>
-                <ResponsiveContainer minHeight={374} width="100%">
+                <ResponsiveContainer minHeight={326} width="100%">
                     <ScatterChart margin={margin}>
                         <XAxis
                             dataKey="value"
