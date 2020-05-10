@@ -21,7 +21,15 @@ const ColorContext = React.createContext({});
 const ColorProvider = ColorContext.Provider;
 
 function IconLabel({ x, y, width, height, iconUrl } = {}) {
-    return <image x={x - width / 2} y={y - height / 2} width={iconSize} height={iconSize} href={iconUrl} />;
+    return (
+        <image
+            x={x + width / 2 - iconSize / 2}
+            y={y + height / 2 - iconSize / 2}
+            width={iconSize}
+            height={iconSize}
+            href={iconUrl}
+        />
+    );
 }
 
 const AxisLabel = ({ axisType, viewBox: { x, y, width, height }, children }) => {

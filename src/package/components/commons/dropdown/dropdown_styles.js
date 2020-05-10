@@ -7,11 +7,11 @@ export default {
         display: 'flex',
         flexDirection: 'row'
     },
-    button: ({ color = 'red', backgroundColor = 'blue', borderColor = 'white' } = {}) => ({
+    select: ({ color = 'red', backgroundColor = 'blue', borderColor = 'white' } = {}) => ({
         height: 'fit-content',
         width: 'fit-content',
         maxWidth: '100%',
-        padding: [8.5, 22],
+        padding: [5, 14],
         cursor: 'pointer',
         position: 'relative',
         overflow: 'hidden',
@@ -21,19 +21,10 @@ export default {
         flexDirection: 'row',
         justifyContent: 'center',
         border: [1, 'solid', borderColor],
+        borderRadius: borderRadius,
         transition: 'color 0.3s, background-color 0.3s',
 
-        '&:first-child': {
-            borderTopLeftRadius: borderRadius,
-            borderBottomLeftRadius: borderRadius
-        },
-
-        '&:last-child': {
-            borderTopRightRadius: borderRadius,
-            borderBottomRightRadius: borderRadius
-        },
-
-        '&:hover': {
+        '&:hover, &:focus': {
             backgroundColor: increaseContrast(backgroundColor, color, 1)
         },
 
@@ -41,12 +32,8 @@ export default {
             backgroundColor: backgroundColor
         }
     }),
-    size_small: () => ({
-        padding: [5, 14]
-    }),
-    icon: ({ color } = {}) => ({
-        stroke: color,
-        fill: color,
-        height: 26
-    })
+    option: {
+        paddingTop: 4,
+        paddingBottom: 4
+    }
 };
