@@ -53,7 +53,7 @@ const Content = ({ hasEducation, data, handleAddButtonClick, classes }) => {
     if (hasEducation) {
         return (
             <>
-                <img src="/images/UniBayreuth.jpg" alt={data?.[0]?.institution} className={classes.uniLogo} />
+                <img src={data?.[0]?.logo} alt={data?.[0]?.institution} className={classes.uniLogo} />
                 <ProfileCardFrontTypography classes={{ container: classes.typography }}>
                     <FormattedMessage
                         id="Studies.title"

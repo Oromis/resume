@@ -102,6 +102,15 @@
         "en": "University of Bayreuth",
         "de": "Universität Bayreuth"
       },
+      "logo": "/images/UniBayreuth.jpg",
+      "finalGrade": {
+        "en": "1.1 (Excellent)",
+        "de": "1,1 (Ausgezeichnet)"
+      },
+      "specialization": {
+        "en": "Economics",
+        "de": "Wirtschaftswissenschaften"
+      },
       "index": 0,
       "studyType": "Master of Science (M.Sc.), Computer Science",
       "startDate": "2015-04-01",
@@ -112,6 +121,15 @@
       "institution": {
         "en": "University of Bayreuth",
         "de": "Universität Bayreuth"
+      },
+      "logo": "/images/UniBayreuth.jpg",
+      "finalGrade": {
+        "en": "1.5 (Very Good)",
+        "de": "1,5 (Sehr Gut)"
+      },
+      "specialization": {
+        "en": "Engineering",
+        "de": "Ingenieurwissenschaften"
       },
       "index": 1,
       "studyType": "Bachelor of Science (B.Sc.), Computer Science",
@@ -203,6 +221,10 @@
       "name": "German",
       "position": 0,
       "value": 100,
+      "level": {
+        "en": "Mother Tongue",
+        "de": "Muttersprache"
+      },
       "language": {
         "en": "German",
         "de": "Deutsch"
@@ -214,6 +236,10 @@
       "name": "English",
       "position": 1,
       "value": 80,
+      "level": {
+        "en": "C1 (Advanced)",
+        "de": "C1 (Fließend in Wort und Schrift)"
+      },
       "language": {
         "en": "English",
         "de": "Englisch"
@@ -225,6 +251,10 @@
       "name": "French",
       "position": 2,
       "value": 30,
+      "level": {
+        "en": "B1 (Intermediate)",
+        "de": "B1 (Fortgeschrittene Grundkenntnisse)"
+      },
       "language": {
         "en": "French",
         "de": "Französisch"

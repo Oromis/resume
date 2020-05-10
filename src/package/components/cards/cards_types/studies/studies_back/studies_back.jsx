@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from 'react';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { createUseStyles } from 'react-jss';
 import { getProfileText } from '../../../../../utils/profile_translation';
 import { ProfileCardSection } from '../../../../commons/profile_card/profile_card_section/profile_card_section';
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
@@ -8,11 +9,14 @@ import { ProfileCardSectionSubtitle } from '../../../../commons/profile_card/pro
 import { ProfileCardSectionText } from '../../../../commons/profile_card/profile_card_section_text/profile_card_section_text';
 import { existsAndNotEmpty } from '../../../utils/exists_and_not_empty';
 import { NoStudies } from './no_studies/no_studies';
+import styles from './studies_back_styles';
 
+const useStyles = createUseStyles(styles);
 const Study = ({ study }) => {
-    const { startDate, endDate, area, studyType, institution } = study;
+    const { startDate, endDate, area, studyType, institution, logo, finalGrade, specialization } = study;
     const intl = useIntl();
     const title = institution;
+    const classes = useStyles();
     const body = useMemo(() => {
         const bodyParts = [];
         if (studyType) {
@@ -39,11 +43,44 @@ const Study = ({ study }) => {
             return '';
         }
     }, [startDate, endDate]);
+    const schoolName = getProfileText(title, { intl });
+    const details = [];
+    if (date) {
+        details.push(<span key="date">{date}</span>);
+    }
+    if (finalGrade) {
+        if (details.length > 0) {
+            details.push(<br key="br-grade" />);
+        }
+        details.push(
+            <span key="grade">
+                <FormattedMessage id="Studies.back.finalGrade" />
+                {': '}
+                {getProfileText(finalGrade, { intl })}
+            </span>
+        );
+    }
+    if (specialization) {
+        if (details.length > 0) {
+            details.push(<br key="kr-spec" />);
+        }
+        details.push(
+            <span key="spec">
+                <FormattedMessage id="Studies.back.specialization" />
+                {': '}
+                {getProfileText(specialization, { intl })}
+            </span>
+        );
+    }
+
     return (
         <ProfileCardSection>
-            <ProfileCardSectionTitle>{getProfileText(title, { intl })}</ProfileCardSectionTitle>
+            <div className={classes.headRow}>
+                <img src={logo} alt={schoolName} className={classes.logo} />
+                <ProfileCardSectionTitle containerClasses={classes.schoolName}>{schoolName}</ProfileCardSectionTitle>
+            </div>
             <ProfileCardSectionSubtitle>{body}</ProfileCardSectionSubtitle>
-            {date && <ProfileCardSectionText>{date}</ProfileCardSectionText>}
+            {details.length > 0 && <p>{details}</p>}
         </ProfileCardSection>
     );
 };

@@ -251,6 +251,8 @@
     "Studies.noEducation.title": "Add here studies you have done !",
     "Studies.title": "I graduated from {schoolName}",
     "Studies.back.title": "Studies",
+    "Studies.back.finalGrade": "Final grade",
+    "Studies.back.specialization": "Specialization",
     "Unsplash.SearchDialog.Title": "Search pictures from unsplash",
     "Unsplash.brandName": "Unsplash",
     "Unsplash.credit": "Photo by {name} on {unsplashLink}",

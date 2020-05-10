@@ -253,6 +253,8 @@
     "Studies.noEducation.title": "Add here studies you have done !",
     "Studies.title": "Abschluss der {schoolName}",
     "Studies.back.title": "Studium",
+    "Studies.back.finalGrade": "Abschlussnote",
+    "Studies.back.specialization": "Anwendungsgebiet",
     "Unsplash.SearchDialog.Title": "Search pictures from unsplash",
     "Unsplash.brandName": "Unsplash",
     "Unsplash.credit": "Photo by {name} on {unsplashLink}",

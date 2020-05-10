@@ -30,7 +30,8 @@ export const styles = (theme) => {
                 backgroundColor: getContentBackgroundColor(theme, variant),
                 color: backHexColor,
                 flex: 1,
-                overflow: 'auto',
+                overflowX: 'hidden',
+                overflowY: 'auto',
                 ...withCustomVerticalScrollbar(
                     getHexFromPaletteColor(theme, getColorsFromCardVariant(theme, variant).backColor)
                 )

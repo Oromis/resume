@@ -14,7 +14,7 @@ const LanguageColumnComponent = ({
     component: Component = 'div',
     color,
     style,
-    item: { value, language } = {},
+    item: { value, language, level } = {},
     children,
     itemsSize
 }) => {
@@ -25,7 +25,7 @@ const LanguageColumnComponent = ({
         <Tooltip
             open
             customClasses={{ container: classes.popper }}
-            title={`${getProfileText(language, { intl })}: ${value}%`}
+            title={`${getProfileText(language, { intl })}: ${value}%, ${getProfileText(level, { intl })}`}
         >
             <Component className={classes.container} style={style}>
                 <Typography variant="h2" color="light" customClasses={{ container: classes.typography }}>
