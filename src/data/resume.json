@@ -139,108 +139,334 @@
   ],
   "skills": [
     {
-      "id": "d46273d2-de15-435a-b01a-48b1ac34c719",
       "name": "C++",
-      "position": 0,
       "value": 92,
       "passion": 99,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "scatter", "language", "embedded"]
     },
     {
-      "id": "9b58d35c-663e-4acc-ba8d-fe2e66f6e41b",
       "name": "NodeJS",
-      "position": 1,
       "value": 77,
       "passion": 88,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "scatter", "backend"]
     },
     {
-      "id": "307b6b25-edb1-453d-a261-8644bed37caa",
       "name": "React",
-      "position": 2,
-      "value": 81,
+      "value": 85,
       "passion": 78,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "frontend", "scatter"]
     },
     {
-      "id": "f771f40a-d639-40e6-9daf-0007732b888d",
       "name": "Javascript",
-      "position": 3,
       "value": 100,
       "passion": 95,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "frontend", "scatter", "language"]
     },
     {
-      "id": "3b98abd4-20f0-4d91-ac6a-8f182d032183",
       "name": "Embedded",
-      "position": 10,
       "value": 89,
       "passion": 88,
       "tags": ["overview", "scatter"]
     },
     {
-      "id": "d6cb9977-c08a-4d8d-9cd4-1247a60c7e5e",
       "name": "MongoDB",
-      "position": 4,
       "value": 70,
       "passion": 74,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "database", "scatter"]
     },
     {
-      "id": "9fa4355e-9e65-47bd-8470-7b2648671804",
       "name": "SQL",
-      "position": 5,
       "value": 83,
       "passion": 65,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "database","scatter"]
     },
     {
-      "id": "e43f4b29-ed38-4c3c-b57b-b609e5058014",
       "name": "Ruby",
-      "position": 6,
       "value": 65,
       "passion": 90,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "backend", "scatter", "language"]
     },
     {
-      "id": "95413675-0e6b-45d6-b617-427d9920c980",
       "name": "Python",
-      "position": 7,
       "value": 60,
       "passion": 55,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "scatter", "language"]
     },
     {
-      "id": "f599dbee-6131-471f-bbf6-c005f7c2ee06",
       "name": "Java",
-      "position": 8,
       "value": 90,
       "passion": 30,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "backend", "scatter", "language", "mobile"]
     },
     {
-      "id": "bad1f3e2-57f6-408e-a5ce-89386b091b32",
       "name": "C",
-      "position": 9,
       "value": 90,
       "passion": 50,
-      "tags": ["overview", "scatter"]
+      "tags": ["overview", "scatter", "language", "embedded"]
     },
     {
-      "id": "f599dbee-6131-471f-bbf6-c005f7c2ee10",
       "name": "C#",
-      "position": 10,
       "value": 30,
       "passion": 10,
-      "tags": ["scatter"]
+      "tags": ["backend", "scatter", "language"]
     },
     {
-      "id": "f599dbee-6131-471f-bbf6-c005f7c2ee11",
       "name": "PHP",
-      "position": 11,
       "value": 70,
       "passion": 0,
-      "tags": ["scatter"]
+      "tags": ["backend", "scatter", "language"]
+    },
+    {
+      "name": "Mysql",
+      "value": 70,
+      "passion": 50,
+      "tags": ["database", "scatter"]
+    },
+    {
+      "name": "PostgreSQL",
+      "value": 85,
+      "passion": 60,
+      "tags": ["database"]
+    },
+    {
+      "name": "Hadoop",
+      "value": 35,
+      "passion": 20,
+      "tags": ["database"]
+    },
+    {
+      "name": "NoSQL",
+      "value": 50,
+      "passion": 60,
+      "tags": ["database"]
+    },
+    {
+      "name": "SQLite",
+      "value": 75,
+      "passion": 55,
+      "tags": ["database"]
+    },
+    {
+      "name": "AngularJS",
+      "value": 30,
+      "passion": 25,
+      "tags": ["frontend", "scatter"]
+    },
+    {
+      "name": "jQuery",
+      "value": 85,
+      "passion": 10,
+      "tags": ["frontend", "scatter"]
+    },
+    {
+      "name": "HTML5",
+      "value": 90,
+      "passion": 55,
+      "tags": ["frontend"]
+    },
+    {
+      "name": "CSS3",
+      "value": 90,
+      "passion": 70,
+      "tags": ["frontend"]
+    },
+    {
+      "name": "Bootstrap",
+      "value": 75,
+      "passion": 30,
+      "tags": ["frontend"]
+    },
+    {
+      "name": "Spring",
+      "value": 80,
+      "passion": 35,
+      "tags": ["backend", "scatter"]
+    },
+    {
+      "name": "Rails",
+      "value": 75,
+      "passion": 98,
+      "tags": ["backend", "scatter"]
+    },
+    {
+      "name": "Wordpress",
+      "value": 80,
+      "passion": 0,
+      "tags": ["frontend", "scatter"]
+    },
+    {
+      "name": "Rust",
+      "value": 25,
+      "passion": 90,
+      "tags": ["language", "scatter"]
+    },
+    {
+      "name": "Express",
+      "value": 80,
+      "passion": 60,
+      "tags": ["backend"]
+    },
+    {
+      "name": "Git",
+      "value": 85,
+      "passion": 70,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Android",
+      "value": 45,
+      "passion": 80,
+      "tags": ["os", "scatter", "mobile"]
+    },
+    {
+      "name": "Apache",
+      "value": 60,
+      "passion": 5,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Docker",
+      "value": 40,
+      "passion": 70,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Gradle",
+      "value": 65,
+      "passion": 40,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Gulp",
+      "value": 50,
+      "passion": 80,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Nginx",
+      "value": 90,
+      "passion": 85,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Sequelize",
+      "value": 85,
+      "passion": 68,
+      "tags": ["backend"]
+    },
+    {
+      "name": "SSH",
+      "value": 65,
+      "passion": 50,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Tomcat",
+      "value": 50,
+      "passion": 10,
+      "tags": ["tool"]
+    },
+    {
+      "name": "VIM",
+      "value": 65,
+      "passion": 30,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Webpack",
+      "value": 60,
+      "passion": 40,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Arduino",
+      "value": 85,
+      "passion": 35,
+      "tags": ["embedded", "scatter"]
+    },
+    {
+      "name": "Scala",
+      "value": 20,
+      "passion": 40,
+      "tags": ["language"]
+    },
+    {
+      "name": "Kotlin",
+      "value": 40,
+      "passion": 70,
+      "tags": ["language", "mobile"]
+    },
+    {
+      "name": "Raspberry Pi",
+      "value": 80,
+      "passion": 60,
+      "tags": ["embedded"]
+    },
+    {
+      "name": "Ansible",
+      "value": 35,
+      "passion": 60,
+      "tags": ["tool"]
+    },
+    {
+      "name": "React Native",
+      "value": 55,
+      "passion": 70,
+      "tags": ["mobile"]
+    },
+    {
+      "name": "Hibernate",
+      "value": 60,
+      "passion": 30,
+      "tags": ["backend"]
+    },
+    {
+      "name": "Electron",
+      "value": 70,
+      "passion": 30,
+      "tags": ["frontend"]
+    },
+    {
+      "name": "Babel",
+      "value": 85,
+      "passion": 50,
+      "tags": ["tool"]
+    },
+    {
+      "name": "Linux",
+      "value": 80,
+      "passion": 75,
+      "tags": ["os"]
+    },
+    {
+      "name": "Windows",
+      "value": 85,
+      "passion": 50,
+      "tags": ["os"]
+    },
+    {
+      "name": "FreeRTOS",
+      "value": 80,
+      "passion": 65,
+      "tags": ["os", "embedded"]
+    },
+    {
+      "name": "ESP32",
+      "value": 90,
+      "passion": 75,
+      "tags": ["embedded"]
+    },
+    {
+      "name": "STM32",
+      "value": 75,
+      "passion": 65,
+      "tags": ["embedded"]
+    },
+    {
+      "name": "Electronics",
+      "value": 40,
+      "passion": 60,
+      "tags": ["embedded"]
     }
   ],
   "languages": [

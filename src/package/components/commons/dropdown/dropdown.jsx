@@ -17,14 +17,9 @@ export default function Dropdown({ options, value, onChange, className, color, b
         options
     ]);
     return (
-        <select onChange={changeCallback} className={cn(className, classes.select)}>
+        <select onChange={changeCallback} className={cn(className, classes.select)} value={value?.key}>
             {options.map((option) => (
-                <option
-                    key={option.key}
-                    value={option.key}
-                    selected={option.key === value?.key}
-                    className={classes.option}
-                >
+                <option key={option.key} value={option.key} className={classes.option}>
                     {option.label}
                 </option>
             ))}

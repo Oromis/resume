@@ -21,7 +21,7 @@ export const styles = (theme) => ({
     },
     chartSwitch: {
         position: 'absolute',
-        top: 24,
+        top: 34,
         right: 24
     }
 });

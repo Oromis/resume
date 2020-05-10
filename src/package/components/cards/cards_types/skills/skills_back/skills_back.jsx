@@ -50,15 +50,25 @@ const Content = ({ data, handleAddButtonClick }) => {
     const options = useMemo(
         () => [
             { key: 'overview', label: formatMessage({ id: 'Skills.tags.overview' }) },
-            { key: 'scatter', label: formatMessage({ id: 'Skills.tags.scatter' }) }
+            { key: 'language', label: formatMessage({ id: 'Skills.tags.languages' }) },
+            { key: 'database', label: formatMessage({ id: 'Skills.tags.database' }) },
+            { key: 'frontend', label: formatMessage({ id: 'Skills.tags.frontend' }) },
+            { key: 'backend', label: formatMessage({ id: 'Skills.tags.backend' }) },
+            { key: 'embedded', label: formatMessage({ id: 'Skills.tags.embedded' }) },
+            { key: 'tool', label: formatMessage({ id: 'Skills.tags.tools' }) },
+            { key: 'mobile', label: formatMessage({ id: 'Skills.tags.mobile' }) },
+            { key: 'os', label: formatMessage({ id: 'Skills.tags.os' }) }
         ],
         [formatMessage]
     );
 
-    const activeSkills = useMemo(() => (data.skills ?? []).filter((skill) => skill.tags.indexOf(skillTag) !== -1), [
-        data,
-        skillTag
-    ]);
+    const activeSkills = useMemo(
+        () =>
+            (data.skills ?? [])
+                .filter((skill) => skill.tags.indexOf(skillTag) !== -1)
+                .sort((a, b) => b.value - a.value),
+        [data, skillTag]
+    );
 
     if (!hasSkill) {
         return <NoSkill {...{ handleAddButtonClick }} />;

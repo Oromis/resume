@@ -108,10 +108,10 @@ function App() {
             additionalNodes={{
                 banner: {
                     actionsButtons: [
-                        <Button variant="outlined" onClick={handleClick} color={'light'} key="export" size="small">
-                            <SaveIcon className={classes.saveIcon} />
-                            <FormattedMessage id="Profile.header.jsonResume.download" defaultMessage="Export" />
-                        </Button>,
+                        // <Button variant="outlined" onClick={handleClick} color={'light'} key="export" size="small">
+                        //     <SaveIcon className={classes.saveIcon} />
+                        //     <FormattedMessage id="Profile.header.jsonResume.download" defaultMessage="Export" />
+                        // </Button>,
                         <RadioButtons
                             key="language"
                             color="light"

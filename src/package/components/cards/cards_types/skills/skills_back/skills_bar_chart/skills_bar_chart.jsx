@@ -1,3 +1,4 @@
+import { Chip } from '@material-ui/core';
 import chroma from 'chroma-js';
 import React, { useContext, useMemo } from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
@@ -7,6 +8,20 @@ import { DEFAULT_TECHNO_HANDLE } from '../../../../../../utils/icons';
 import { getColorsFromCardVariant, getHexFromPaletteColor } from '../../../../../../utils/styles/styles_utils';
 import { useTechnologies } from '../../../../../hooks/technologies/use_technologies';
 import { styles } from './skills_bar_chart_styles';
+
+import { ReactComponent as LinuxIcon } from '../../../../../../assets/icons/linux.svg';
+import { ReactComponent as WindowsIcon } from '../../../../../../assets/icons/windows.svg';
+import { ReactComponent as EspressifIcon } from '../../../../../../assets/icons/brands/espressif.svg';
+import { ReactComponent as UcIcon } from '../../../../../../assets/icons/microcontroller.svg';
+import { ReactComponent as ChipIcon } from '../../../../../../assets/icons/chip.svg';
+
+const staticIcons = {
+    Linux: LinuxIcon,
+    Windows: WindowsIcon,
+    ESP32: EspressifIcon,
+    STM32: UcIcon,
+    Electronics: ChipIcon
+};
 
 const marginSize = 8;
 const iconSize = 24;
@@ -38,16 +53,15 @@ function IconLabel(props) {
         return `https://process.filestackapi.com/output=format:png/${techno?.handle || DEFAULT_TECHNO_HANDLE}`;
     }, [techno, theme, variantColors]);
 
-    return (
-        <image
-            x={x + width + marginSize}
-            y={y + height / 2 - iconSize / 2}
-            width={iconSize}
-            height={iconSize}
-            dy={0}
-            href={src}
-        />
-    );
+    const xPos = x + width + marginSize;
+    const yPos = y + height / 2 - iconSize / 2;
+    const StaticIcon = staticIcons[name];
+    if (StaticIcon != null) {
+        const color = getHexFromPaletteColor(theme, variantColors.color);
+        return <StaticIcon x={xPos} y={yPos} width={iconSize} height={iconSize} stroke={color} fill={color} />;
+    } else {
+        return <image x={xPos} y={yPos} width={iconSize} height={iconSize} dy={0} href={src} />;
+    }
 }
 
 const useStyles = createUseStyles(styles);

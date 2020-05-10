@@ -90,16 +90,18 @@ const SkillsScatterChart = ({ data, variant }) => {
 
     const mergedData = useMemo(
         () =>
-            data.map((skill) => {
-                const techHandle = technologies?.[skill.name]?.handle ?? DEFAULT_TECHNO_HANDLE;
-                const hex = getHexFromPaletteColor(theme, variantColors.backgroundColor);
-                const luminance = chroma(hex).luminance();
-                const iconUrl =
-                    luminance < 0.98
-                        ? `https://process.filestackapi.com/output=format:png/negative/modulate=brightness:1000/compress/${techHandle}`
-                        : `https://process.filestackapi.com/output=format:png/${techHandle}`;
-                return { ...skill, iconUrl };
-            }),
+            data
+                .filter((skill) => skill.tags.indexOf('scatter') !== -1)
+                .map((skill) => {
+                    const techHandle = technologies?.[skill.name]?.handle ?? DEFAULT_TECHNO_HANDLE;
+                    const hex = getHexFromPaletteColor(theme, variantColors.backgroundColor);
+                    const luminance = chroma(hex).luminance();
+                    const iconUrl =
+                        luminance < 0.98
+                            ? `https://process.filestackapi.com/output=format:png/negative/modulate=brightness:1000/compress/${techHandle}`
+                            : `https://process.filestackapi.com/output=format:png/${techHandle}`;
+                    return { ...skill, iconUrl };
+                }),
         [data, technologies, variantColors, theme]
     );
 
