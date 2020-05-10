@@ -7,14 +7,6 @@ export const BasicsValidationSchema = (formatMessage) =>
             .required(formatMessage(validationTranslations.required))
             .min(5, formatMessage(validationTranslations.min, { min: 5 }))
             .max(100, formatMessage(validationTranslations.max, { max: 110 })),
-        currentCity: Yup.object()
-            .nullable()
-            .required(formatMessage(validationTranslations.required))
-            .shape({
-                name: Yup.string()
-                    .min(5, formatMessage(validationTranslations.min, { min: 5 }))
-                    .required(formatMessage(validationTranslations.required))
-            }),
         experienceYears: Yup.number()
             .min(0, formatMessage(validationTranslations.min, { min: 0 }))
             .max(20, formatMessage(validationTranslations.max, { max: 20 }))

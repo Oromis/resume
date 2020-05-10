@@ -1,4 +1,6 @@
 import React, { memo, useMemo } from 'react';
+import { useIntl } from 'react-intl';
+import { getProfileText } from '../../../../../utils/profile_translation';
 import { ProfileCardSection } from '../../../../commons/profile_card/profile_card_section/profile_card_section';
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
 import { ProfileCardAnimatedBack } from '../../../../commons/profile_card/profile_card_animated_back/profile_card_animated_back';
@@ -8,7 +10,8 @@ import { existsAndNotEmpty } from '../../../utils/exists_and_not_empty';
 import { NoStudies } from './no_studies/no_studies';
 
 const Study = ({ study }) => {
-    const { endDate, area, studyType, institution } = study;
+    const { startDate, endDate, area, studyType, institution } = study;
+    const intl = useIntl();
     const title = institution;
     const body = useMemo(() => {
         const bodyParts = [];
@@ -26,15 +29,19 @@ const Study = ({ study }) => {
     }, [study]);
 
     const date = useMemo(() => {
-        const year = typeof endDate?.year === 'function' ? endDate.year() : null;
-        if (!Number.isNaN(Number(year))) {
-            return year;
+        const startYear = startDate.year();
+        const endYear = typeof endDate?.year === 'function' ? endDate.year() : null;
+        if (startDate.isValid() && endDate.isValid() && startYear !== endYear) {
+            return `${startYear} - ${endYear}`;
+        } else if (endDate.isValid()) {
+            return endYear;
+        } else {
+            return '';
         }
-        return '';
-    }, [endDate]);
+    }, [startDate, endDate]);
     return (
         <ProfileCardSection>
-            <ProfileCardSectionTitle>{title}</ProfileCardSectionTitle>
+            <ProfileCardSectionTitle>{getProfileText(title, { intl })}</ProfileCardSectionTitle>
             <ProfileCardSectionSubtitle>{body}</ProfileCardSectionSubtitle>
             {date && <ProfileCardSectionText>{date}</ProfileCardSectionText>}
         </ProfileCardSection>
@@ -50,10 +57,13 @@ const Content = ({ data, handleAddButtonClick }) => {
     return data?.map((study, index) => <Study key={`study_${index}_${study.id}`} study={study} />);
 };
 
-const StudiesBackComponent = ({ data: { education: data }, handleAddButtonClick }) => (
-    <ProfileCardAnimatedBack title="Studies">
-        <Content {...{ data, handleAddButtonClick }} />
-    </ProfileCardAnimatedBack>
-);
+const StudiesBackComponent = ({ data: { education: data }, handleAddButtonClick }) => {
+    const { formatMessage } = useIntl();
+    return (
+        <ProfileCardAnimatedBack title={formatMessage({ id: 'Studies.back.title' })}>
+            <Content {...{ data, handleAddButtonClick }} />
+        </ProfileCardAnimatedBack>
+    );
+};
 
 export const StudiesBack = memo(StudiesBackComponent);

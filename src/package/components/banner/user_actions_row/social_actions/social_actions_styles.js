@@ -13,6 +13,7 @@ export const styles = (theme) => {
             alignItems: 'center',
             flexWrap: 'wrap',
             justifyContent: 'flex-end',
+            alignSelf: 'flex-start',
             marginLeft: spacing * 3,
             [QUERY_SMALL]: {
                 width: '100%',

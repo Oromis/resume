@@ -63,6 +63,7 @@ const Content = ({ data, handleAddButtonClick }) => {
                 options={options}
                 value={options.find((o) => o.key === chartStyle)}
                 color={colorKeys.color}
+                size="small"
                 backgroundColor={colorKeys.backgroundColor}
                 onChange={onChartStyleChange}
                 className={classes.chartSwitch}

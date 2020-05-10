@@ -82,7 +82,7 @@ const Content = ({ data, handleAddButtonClick, classes }) => {
                     cardVariant={variant}
                 >
                     <button className={classes.languageLettersButton} type="button">
-                        {item.language?.substring(0, 2).toUpperCase()}
+                        {item.code}
                     </button>
                 </LanguageColumn>
             ))}

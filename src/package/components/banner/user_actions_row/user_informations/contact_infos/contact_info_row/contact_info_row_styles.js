@@ -7,10 +7,9 @@ export const styles = (theme) => ({
     icon: {
         height: 20,
         width: 'auto',
-        fill: `rgba(${theme.palette.light.rgbShades[500].join(', ')}, .75)`
-    },
-    typography: {
-        marginLeft: 8 * 2
+        fill: `rgba(${theme.palette.light.rgbShades[500].join(', ')}, .75)`,
+        verticalAlign: 'bottom',
+        marginRight: 8
     },
     button: {
         display: 'flex'

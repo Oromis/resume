@@ -2,6 +2,7 @@ import React, { memo, useMemo } from 'react';
 
 import { createUseStyles } from 'react-jss';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { getProfileText } from '../../../../../utils/profile_translation';
 
 import { ProfileCardAnimatedBack } from '../../../../commons/profile_card/profile_card_animated_back/profile_card_animated_back';
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
@@ -24,9 +25,9 @@ const useStyles = createUseStyles(styles);
 const BasicsBackComponent = ({ data, handleAddButtonClick }) => {
     const [mode] = useMode();
     const classes = useStyles();
+    const intl = useIntl();
 
     const {
-        currentCity: { name: currentCityName },
         experienceYears,
         contractTypes,
         studiesLevel,
@@ -50,7 +51,7 @@ const BasicsBackComponent = ({ data, handleAddButtonClick }) => {
                 </NoDataButton>
             );
         }
-        return <span>{personalDescription}</span>;
+        return <span>{getProfileText(personalDescription, { intl })}</span>;
     }, [personalDescription, mode, handleAddButtonClick, classes]);
 
     const sections = useMemo(
@@ -103,7 +104,6 @@ const BasicsBackComponent = ({ data, handleAddButtonClick }) => {
             }
         }),
         [
-            currentCityName,
             experienceYears,
             contractTypes,
             studiesLevel,

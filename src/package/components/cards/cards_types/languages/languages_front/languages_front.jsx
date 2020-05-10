@@ -2,8 +2,9 @@ import React, { memo, useCallback, useMemo } from 'react';
 
 import { createUseStyles } from 'react-jss';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Typography } from '@welovedevs/ui';
+import { getProfileText } from '../../../../../utils/profile_translation';
 import { CenterContentContainer } from '../../../../commons/center_content_container/center_content_container';
 import { ProfileCardFrontTypography } from '../../../../commons/profile_card/profile_card_front_typography/profile_card_front_typography';
 import { ProfileCardActions } from '../../../../commons/profile_card/profile_card_actions/profile_card_actions';
@@ -20,6 +21,7 @@ const useStyles = createUseStyles(styles);
 const LanguagesFrontComponent = ({ data, handleAddButtonClick }) => {
     const classes = useStyles();
     const [side, setSide] = useCardSide();
+    const intl = useIntl();
 
     const handleButtonClick = useCallback(() => setSide(side === SIDES.FRONT ? SIDES.BACK : SIDES.FRONT), [
         side,
@@ -28,11 +30,11 @@ const LanguagesFrontComponent = ({ data, handleAddButtonClick }) => {
 
     const languagesNode = (
         <>
-            {data.languages?.[0]?.language}
+            {getProfileText(data.languages?.[0]?.language, { intl })}
             <br />
-            {data.languages?.[1]?.language}
+            {getProfileText(data.languages?.[1]?.language, { intl })}
             <br />
-            {data.languages?.[2]?.language}
+            {getProfileText(data.languages?.[2]?.language, { intl })}
         </>
     );
 

@@ -9,7 +9,7 @@ import styles from './radio_buttons_styles';
 
 const useStyles = createUseStyles(styles);
 
-const RadioButton = ({ option, color, backgroundColor, isSelected, onClick }) => {
+const RadioButton = ({ option, color, backgroundColor, size, isSelected, onClick }) => {
     const theme = useTheme();
     const fgColor = useMemo(() => (isSelected ? backgroundColor : color), [isSelected, color, backgroundColor, theme]);
     const bgColor = useMemo(() => (isSelected ? color : backgroundColor), [isSelected, color, backgroundColor, theme]);
@@ -21,14 +21,26 @@ const RadioButton = ({ option, color, backgroundColor, isSelected, onClick }) =>
 
     return (
         <Tooltip title={option.label}>
-            <button type="button" className={cn(classes.button, classes.withColor)} onClick={clickHandler}>
+            <button
+                type="button"
+                className={cn(classes.button, classes[`size_${size}`], classes.withColor)}
+                onClick={clickHandler}
+            >
                 {option.icon ? <option.icon className={classes.icon} /> : option.label}
             </button>
         </Tooltip>
     );
 };
 
-const RadioButtons = ({ options, value, className, color = 'default', backgroundColor, onChange = () => {} }) => {
+const RadioButtons = ({
+    options,
+    value,
+    className,
+    size = 'normal',
+    color = 'default',
+    backgroundColor,
+    onChange = () => {}
+}) => {
     const classes = useStyles();
     return (
         <div className={cn(classes.container, className)}>
@@ -40,6 +52,7 @@ const RadioButtons = ({ options, value, className, color = 'default', background
                         option={option}
                         color={color}
                         backgroundColor={backgroundColor}
+                        size={size}
                         isSelected={selected}
                         onClick={onChange}
                     />

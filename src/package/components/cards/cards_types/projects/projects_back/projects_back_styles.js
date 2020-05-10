@@ -1,10 +1,21 @@
-import { flex, getColorsFromCardVariant, getHexFromPaletteColor } from '../../../../../utils/styles/styles_utils';
+import {
+    flex,
+    getColorsFromCardVariant,
+    getHexFromPaletteColor,
+    withCustomVerticalScrollbar
+} from '../../../../../utils/styles/styles_utils';
 
 const { center } = flex;
 
 export const styles = (theme) => {
     const { palette } = theme;
     return {
+        container: ({ variant } = {}) => ({
+            overflow: 'auto',
+            ...withCustomVerticalScrollbar(
+                getHexFromPaletteColor(theme, getColorsFromCardVariant(theme, variant).backColor)
+            )
+        }),
         title: {
             position: 'relative',
             '& > *:not($background)': {

@@ -1,9 +1,11 @@
 import React, { useContext, useMemo } from 'react';
+import { useIntl } from 'react-intl';
 
 import { createUseStyles } from 'react-jss';
 import { get } from 'lodash';
 
 import { Typography } from '@welovedevs/ui';
+import { getProfileText } from '../../../../utils/profile_translation';
 
 import { Avatar } from '../../../commons/avatar/avatar';
 import { Column } from '../../../commons/column/column';
@@ -24,6 +26,7 @@ export const UserInformations = () => {
     const [additionalNodes] = useAdditionalNodes('banner.userInformations', null);
     const [isEditing] = useIsEditing();
     const showContactInformations = useOptions('showContactInfos');
+    const intl = useIntl();
 
     const contactInformations = useMemo(
         () =>
@@ -61,7 +64,7 @@ export const UserInformations = () => {
                     }}
                     component="h4"
                 >
-                    {data.basics?.summary}
+                    {getProfileText(data.basics?.summary, { intl })}
                 </Typography>
                 {showContactInformations && (isEditing || hasContactInformations) && (
                     <ContactInfos contactInformations={contactInformations} />

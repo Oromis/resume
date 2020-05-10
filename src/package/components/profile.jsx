@@ -13,7 +13,7 @@ import { styles } from './profile_styles';
 
 import en from '../i18n/en.json';
 import fr from '../i18n/fr.json';
-import tr from '../i18n/tr.json';
+import de from '../i18n/de.json';
 
 import '../styles/lib/slick-carousel/slick-theme.css';
 import '../styles/lib/slick-carousel/slick.css';
@@ -35,7 +35,7 @@ if (!Intl.PluralRules) {
 const messages = {
     en,
     fr,
-    tr
+    de
 };
 const useStyles = createUseStyles(styles);
 

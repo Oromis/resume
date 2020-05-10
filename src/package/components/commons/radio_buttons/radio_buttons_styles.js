@@ -13,7 +13,7 @@ export default {
         height: 'fit-content',
         width: 'fit-content',
         maxWidth: '100%',
-        padding: [8, 14],
+        padding: [8.5, 22],
         cursor: 'pointer',
         position: 'relative',
         overflow: 'hidden',
@@ -43,10 +43,12 @@ export default {
             backgroundColor: backgroundColor
         }
     }),
+    size_small: () => ({
+        padding: [5, 14]
+    }),
     icon: ({ color } = {}) => ({
-        height: 22,
-        width: 22,
         stroke: color,
-        fill: color
+        fill: color,
+        height: 26
     })
 };

@@ -146,13 +146,9 @@ const Actions = ({ onClose, handleSubmit, fullScreen, classes, receivedClasses, 
             root: cn(classes.actions, receivedClasses.actions)
         }}
     >
-        <Tooltip
-            title={<FormattedMessage id="EditDialog.close.tooltip" defaultMessage="Any modification won't be saved!" />}
-        >
-            <Button size="small" onClick={onClose}>
-                <FormattedMessage id="Main.lang.close" defaultMessage="Close" />
-            </Button>
-        </Tooltip>
+        <Button size="small" onClick={onClose}>
+            <FormattedMessage id="Main.lang.close" defaultMessage="Close" />
+        </Button>
         {isEditing && (
             <Button
                 variant={fullScreen ? 'contained' : 'text'}

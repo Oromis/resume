@@ -15,7 +15,7 @@ export const styles = (theme) => {
     return {
         // Offset value = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
         container: ({ value, color, itemsSize }) => ({
-            height: `${((value - 0) * (MAX - MIN)) / (MAX - 0) + MIN}%`,
+            height: `${Math.max(MIN, value)}%`,
             width: `${100 / itemsSize}%`,
             backgroundColor: color,
             color: '#fff',
@@ -36,7 +36,7 @@ export const styles = (theme) => {
         },
         [QUERY_EXTRA_SMALL]: {
             container: {
-                paddingBottom: [spacing * 2, '!important']
+                paddingBottom: [spacing / 2, '!important']
             },
             typography: {
                 fontSize: 30

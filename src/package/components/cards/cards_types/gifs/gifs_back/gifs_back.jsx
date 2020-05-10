@@ -1,6 +1,7 @@
 import React, { memo, useCallback, useMemo, useRef, useState } from 'react';
 
 import cn from 'classnames';
+import { useIntl } from 'react-intl';
 import { createUseStyles } from 'react-jss';
 import Slider from 'react-slick';
 import { animated, useSpring, useTransition } from 'react-spring';
@@ -8,6 +9,7 @@ import { animated, useSpring, useTransition } from 'react-spring';
 import { Typography } from '@welovedevs/ui';
 
 import { ReactComponent as ArrowIcon } from '../../../../../assets/icons/arrow-right.svg';
+import { getProfileText } from '../../../../../utils/profile_translation';
 
 import { GifsSidesCommons } from '../gifs_sides_commons/gifs_sides_commons';
 
@@ -155,6 +157,7 @@ const SlideItem = ({ gifUrl, name, classes }) => {
 };
 
 const TransitioningItem = ({ item, props, pauseSlider, resumeSlider, classes }) => {
+    const intl = useIntl();
     if (!item?.gifUrl) {
         return (
             <animated.div
@@ -171,7 +174,7 @@ const TransitioningItem = ({ item, props, pauseSlider, resumeSlider, classes }) 
                     variant="h3"
                     component="h4"
                 >
-                    {item.name}
+                    {getProfileText(item.name, { intl })}
                 </Typography>
             </animated.div>
         );
@@ -184,7 +187,7 @@ const TransitioningItem = ({ item, props, pauseSlider, resumeSlider, classes }) 
             color="light"
             variant="h2"
         >
-            {item.name}
+            {getProfileText(item.name, { intl })}
         </Typography>
     );
 };

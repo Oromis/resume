@@ -2,8 +2,9 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 import cn from 'classnames';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { createUseStyles } from 'react-jss';
+import { getProfileText } from '../../../../../utils/profile_translation';
 
 import { CenterContentContainer } from '../../../../commons/center_content_container/center_content_container';
 import { ProfileCardActions } from '../../../../commons/profile_card/profile_card_actions/profile_card_actions';
@@ -26,6 +27,7 @@ const useStyles = createUseStyles(styles);
 const BasicsFrontComponent = ({ data, handleAddButtonClick }) => {
     const [mode] = useMode();
     const [variant] = useCardVariant();
+    const intl = useIntl();
 
     const classes = useStyles({ variant });
 
@@ -62,16 +64,16 @@ const BasicsFrontComponent = ({ data, handleAddButtonClick }) => {
                             )
                         }}
                     >
-                        {data.summary}
+                        {getProfileText(data.summary, { intl })}
                     </ProfileCardFrontTypography>
-                    {currentCityName && (
+                    {data?.city && (
                         <ProfileCardFrontTypography
                             variant="h4"
                             component="h3"
                             classes={{ container: classes.location }}
                         >
                             <LocationIcon className={classes.locationIcon} />
-                            {data?.currentCity?.name}
+                            {getProfileText(data?.city, { intl })}, {getProfileText(data?.countryCode, { intl })}
                         </ProfileCardFrontTypography>
                     )}
                 </div>

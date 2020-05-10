@@ -1,8 +1,10 @@
 import React, { useCallback, useMemo } from 'react';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { createUseStyles, useTheme } from 'react-jss';
 import { Typography } from '@welovedevs/ui';
+import moment from 'moment';
+import { getProfileText } from '../../../../../../utils/profile_translation';
 
 import { ProfileCardSectionTitle } from '../../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
 import { ProfileCardSectionSubtitle } from '../../../../../commons/profile_card/profile_card_section_subtitle/profile_card_section_subtitle';
@@ -26,18 +28,27 @@ const useStyles = createUseStyles(styles);
 
 const ProjectSectionContainer = ({ project, cardVariant, onDelete, index }) => {
     const classes = useStyles();
+    const intl = useIntl();
 
     const descriptionChunks = useMemo(
         () =>
-            project.description
+            getProfileText(project.description, { intl })
                 ?.split('\n')
                 .map((descriptionChunk, chunkIndex) => (
                     <p key={`project_description_chunk_${project.id}_${chunkIndex}`}>{descriptionChunk}</p>
                 )),
-        [project.description]
+        [project.description, intl]
     );
 
-    const formattedDate = useMemo(() => project.date?.year(), [project.date]);
+    const formattedDate = useMemo(() => {
+        const startDate = moment(project.startDate ?? null);
+        const endDate = moment(project.endDate);
+        if (startDate.isValid() && startDate.year() !== endDate.year()) {
+            return `${startDate.year()} - ${endDate.year()}`;
+        } else {
+            return `${endDate.year()}`;
+        }
+    }, [project.startDate, project.endDate]);
     return (
         <ProfileCardSection cardVariant={cardVariant}>
             <ProfileCardSectionTitle>{project.name}</ProfileCardSectionTitle>

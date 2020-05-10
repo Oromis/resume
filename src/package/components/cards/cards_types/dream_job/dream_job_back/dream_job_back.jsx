@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { List, ListItem, PopperCard, Typography } from '@welovedevs/ui';
+import { getProfileText } from '../../../../../utils/profile_translation';
 
 import { ProfileCardSection } from '../../../../commons/profile_card/profile_card_section/profile_card_section';
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
@@ -113,6 +114,7 @@ const DreamJobLocations = ({ remoteFrequency, places, classes }) => {
 const DreamJobPlaces = ({ places = [], classes }) => {
     const textAnchor = useRef();
     const [open, handlers] = useOpenerState();
+    const intl = useIntl();
     const { firstPlace, remainingPlaces } = useMemo(() => {
         const placesCopy = [...places];
         const item = placesCopy.shift();
@@ -126,7 +128,10 @@ const DreamJobPlaces = ({ places = [], classes }) => {
                     <FormattedMessage
                         id={'Dreamjob.Back.Location.OnePlaceConcrete'}
                         defaultMessage="I want to work in {place}, ideally in {ideally}"
-                        values={{ place: firstPlace?.name ?? '', ideally: firstPlace?.ideally ?? '' }}
+                        values={{
+                            place: getProfileText(firstPlace?.name, { intl }) ?? '',
+                            ideally: getProfileText(firstPlace?.ideally, { intl }) ?? ''
+                        }}
                     />
                 ) : (
                     <FormattedMessage

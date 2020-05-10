@@ -22,7 +22,7 @@ const ProjectsBackComponent = ({ data, handleAddButtonClick }) => {
     const { onEdit } = useContext(DeveloperProfileContext);
     const classes = useStyles({ variant });
 
-    const imageSrc = useMemo(() => data.projects?.[0]?.images?.url ?? DEFAULT_PROJECT_IMAGE, [
+    const imageSrc = useMemo(() => data.projects?.[0]?.images?.[0]?.url ?? DEFAULT_PROJECT_IMAGE, [
         data.projects?.[0]?.images
     ]);
     const alt = data.projects?.[0]?.title;
@@ -37,7 +37,7 @@ const ProjectsBackComponent = ({ data, handleAddButtonClick }) => {
     );
 
     return (
-        <>
+        <div className={classes.container}>
             <ProfileCardTitle
                 customClasses={{
                     container: classes.title,
@@ -58,7 +58,7 @@ const ProjectsBackComponent = ({ data, handleAddButtonClick }) => {
                 ))}
                 {!existsAndNotEmpty(data?.projects) && <NoProject handleAddButtonClick={handleAddButtonClick} />}
             </ProfileCardContent>
-        </>
+        </div>
     );
 };
 

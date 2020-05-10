@@ -2,6 +2,7 @@ import React, { Fragment, memo, useMemo } from 'react';
 
 import { useIntl } from 'react-intl';
 import { createUseStyles } from 'react-jss';
+import { getProfileText } from '../../../../../utils/profile_translation';
 
 import { ProfileCardSection } from '../../../../commons/profile_card/profile_card_section/profile_card_section';
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
@@ -22,9 +23,10 @@ const ExperienceContent = ({ experience, variant, classes }) => {
     const { formatMessage } = useIntl();
     const [buildTitle] = useAdditionalNodes('cards.experiences.back.experience.content.buildTitle', null);
     const [customization] = useCustomization();
+    const intl = useIntl();
     const { id, name, summary, place, position } = experience;
     const dateString = useMemo(() => {
-        const displayFormat = customization?.fields?.work?.customDateFormat || 'MMM YYYY';
+        const displayFormat = customization?.fields?.work?.customDateFormat || 'MM/YYYY';
         if (!experience.endDate) {
             if (!experience.startDate) {
                 return '';
@@ -48,21 +50,21 @@ const ExperienceContent = ({ experience, variant, classes }) => {
             if (builder.length) {
                 builder.push(' - ');
             }
-            builder.push(place.name);
+            builder.push(getProfileText(place.name, { intl }));
         }
         if (builder.length) {
             builder.push(<br />);
         }
         builder.push(dateString);
         return builder.map((value, index) => <Fragment key={`builder_part_${index}`}>{value}</Fragment>);
-    }, [buildTitle, experience]);
+    }, [buildTitle, experience, intl]);
     return (
         <ProfileCardSection key={id} cardVariant={variant}>
-            <ProfileCardSectionTitle>{position}</ProfileCardSectionTitle>
+            <ProfileCardSectionTitle>{getProfileText(position, { intl })}</ProfileCardSectionTitle>
             <ProfileCardSectionSubtitle customClasses={{ container: classes.subtitle }}>
                 {title}
             </ProfileCardSectionSubtitle>
-            <ProfileCardSectionText>{summary}</ProfileCardSectionText>
+            <ProfileCardSectionText>{getProfileText(summary, { intl })}</ProfileCardSectionText>
         </ProfileCardSection>
     );
 };
@@ -81,8 +83,9 @@ const Content = ({ data, handleAddButtonClick, classes }) => {
 
 const ExperiencesBackComponent = ({ data, handleAddButtonClick }) => {
     const classes = useStyles();
+    const { formatMessage } = useIntl();
     return (
-        <ProfileCardAnimatedBack title="Experiences">
+        <ProfileCardAnimatedBack title={formatMessage({ id: 'Experiences.backCard.title' })}>
             <Content {...{ data, handleAddButtonClick, classes }} />
         </ProfileCardAnimatedBack>
     );

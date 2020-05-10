@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { createUseStyles } from 'react-jss';
 
 import { TextField, Typography } from '@welovedevs/ui';
 import { useFormikContext } from 'formik';
+import { getProfileText } from '../../../../../../utils/profile_translation';
 
 import { styles } from './project_dialog_content_description_styles';
 
@@ -26,9 +27,14 @@ const Content = ({ description, isEditing, classes }) => {
     return <DefaultContent description={description} classes={classes} />;
 };
 
-const DefaultContent = ({ description, classes }) => (
-    <Typography customClasses={{ container: classes.typography }}>{description}</Typography>
-);
+const DefaultContent = ({ description, classes }) => {
+    const intl = useIntl();
+    return (
+        <Typography customClasses={{ container: classes.typography }}>
+            {getProfileText(description, { intl })}
+        </Typography>
+    );
+};
 
 const EditingContent = ({ classes }) => {
     const { handleChange, values, errors } = useFormikContext();

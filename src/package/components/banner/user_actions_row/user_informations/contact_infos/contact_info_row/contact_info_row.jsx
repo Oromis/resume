@@ -12,16 +12,20 @@ const useStyles = createUseStyles(styles);
 export const ContactInfoRow = ({ icon: Icon, translation, value, link = false }) => {
     const classes = useStyles();
     const { formatMessage } = useIntl();
+    const innerContent = (
+        <Typography color="light">
+            <Icon className={classes.icon} /> {value}
+        </Typography>
+    );
     return (
         <div className={classes.container}>
             <Tooltip title={formatMessage(translation)}>
-                <button className={classes.button} type="button">
-                    <Icon className={classes.icon} />
-                </button>
+                {link ? (
+                    <a href={typeof link === 'string' ? `${link}:${value}` : value}>{innerContent}</a>
+                ) : (
+                    innerContent
+                )}
             </Tooltip>
-            <Typography customClasses={{ container: classes.typography }} color="light">
-                {link ? <a href={typeof link === 'string' ? `${link}:${value}` : value}>{value}</a> : value}
-            </Typography>
         </div>
     );
 };

@@ -43,7 +43,7 @@ export const styles = (theme) => {
             typography: {
                 fontSize: 28,
                 wordWrap: 'break-word',
-                '-webkit-line-clamp': 2,
+                '-webkit-line-clamp': 3,
                 lineHeight: 1.2
             }
         },

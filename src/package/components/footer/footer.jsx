@@ -8,8 +8,6 @@ import { Tooltip } from '@welovedevs/ui';
 import { useMediaQuery } from '@material-ui/core';
 import { getFooterColor } from '../../styles/color_utils';
 import { DeveloperProfileContext } from '../../utils/context/contexts';
-import { getHexFromPaletteColor } from '../../utils/styles/styles_utils';
-import { mapSkillsFromJsonResume } from '../cards/cards_types/skills/data/mapping';
 
 import { ShareLinks } from './share_links/share_links';
 
@@ -56,9 +54,7 @@ const LegalSection = () => {
                     <br />
                     {imprintData.address}
                     <br />
-                    {imprintData.zip}
-                    <br />
-                    {imprintData.city}, {imprintData.country}
+                    {imprintData.zip} {imprintData.city}, {imprintData.country}
                     <br />
                     {imprintData.email}
                 </p>

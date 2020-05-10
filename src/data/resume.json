@@ -1,0 +1,487 @@
+{
+  "basics": {
+    "name": "David",
+    "surname": "Bauske",
+    "picture": "/images/David Bauske_VoltStorage_Portrait_SW.jpg",
+    "title": "Head of IT",
+    "summary": {
+      "en": "Versatile software enthusiast",
+      "de": "Vielseitiger Software-Enthusiast"
+    },
+    "email": "david.bauske@googlemail.com",
+    "location": {
+      "countryCode": "DE",
+      "city": {
+        "en": "Munich",
+        "de": "München"
+      }
+    }
+  },
+  "work": [
+    {
+      "name": "VoltStorage GmbH",
+      "position": "Head of IT",
+      "index": 0,
+      "startDate": "2017-04-01",
+      "summary": {
+        "en": "Head of IT at CleanTech Start-up, leader of a team of 3. Software Architect, Project Manager & Engineer.\nNode.js, React, Embedded C++ and much more.",
+        "de": "Head of IT bei CleanTech Start-up, Leiter eines 3-köpfigen Teams. Projektmanager, Software-Architekt & -Ingenieur.\nNode.js, React, Embedded C++ und vieles mehr."
+      },
+      "location": {
+        "en": "Munich, Germany",
+        "de": "München, Deutschland"
+      },
+      "placeId": "ChIJ2V-Mo_l1nkcRfZixfUq4DAE",
+      "id": "-M5pHEVdhc3QH_9YIcmU"
+    },
+    {
+      "name": "Daimler AG",
+      "position": {
+        "en": "Master Thesis Student",
+        "de": "Masterarbeitsstudent"
+      },
+      "index": 1,
+      "startDate": "2016-10-01",
+      "endDate": "2017-03-01",
+      "summary": {
+        "en": "Research methods for improving perceived quality of service (QoS) of Online Services in modern luxury vehicles. Specifically, development of strategies to offer online services in the car while a very slow or no internet connection at all is available.",
+        "de": "Erforschung von Methoden zur Verbesserung der Servicequalität (QoS) von Onlinediensten in modernen Luxusfahrzeugen. Insbesondere Entwicklung von Strategien, um Onlinedienste im Auto anzubieten, während nur eine sehr langsame oder gar keine Internetverbindung verfügbar ist."
+      },
+      "location": {
+        "en": "Sindelfingen, Germany",
+        "de": "Sindelfingen, Deutschland"
+      },
+      "placeId": "ChIJWwEkOrXfmUcRUCgJjTz9HwQ",
+      "id": "-M5pHEVdhc3QH_9YIcmV"
+    },
+    {
+      "name": "salomatic",
+      "position": {
+        "en": "Software Engineer",
+        "de": "Softwareingenieur"
+      },
+      "index": 2,
+      "startDate": "2016-05-01",
+      "endDate": "2016-09-01",
+      "summary": {
+        "en": "Full-Stack Web development, Ruby on Rails, React, PostgreSQL",
+        "de": "Full-Stack Webentwicklung, Ruby on Rails, React, PostgreSQL"
+      },
+      "location": {
+        "en": "Bayreuth, Germany",
+        "de": "Bayreuth, Deutschland"
+      },
+      "placeId": "ChIJGQMtqMWioUcRNOfR0gnfhto",
+      "id": "-M5pHEVdhc3QH_9YIcmW"
+    },
+    {
+      "name": "Rentino Rio GmbH",
+      "position": {
+        "en": "Software Intern",
+        "de": "Praktikant / Werksstudent"
+      },
+      "index": 3,
+      "startDate": "2009-06-01",
+      "endDate": "2015-07-01",
+      "summary": {
+        "en": "First intern, then working student (on & off, ~2 months per year). Java, JSP, SQL, HTML, CSS, JavaScript",
+        "de": "Zunächst Praktikant, dann Werksstudent (nicht durchgängig, ~2 Monate pro Jahr). Java, JSP, SQL, HTML, CSS, JavaScript"
+      },
+      "location": {
+        "en": "Bayreuth, Germany",
+        "de": "Bayreuth, Deutschland"
+      },
+      "placeId": "ChIJGQMtqMWioUcRNOfR0gnfhto",
+      "id": "-M5pJaCvPIVykPPCV1g2"
+    }
+  ],
+  "education": [
+    {
+      "id": "-M5pHEVdhc3QH_9YIcmX",
+      "institution": {
+        "en": "University of Bayreuth",
+        "de": "Universität Bayreuth"
+      },
+      "index": 0,
+      "studyType": "Master of Science (M.Sc.), Computer Science",
+      "startDate": "2015-04-01",
+      "endDate": "2017-04-01"
+    },
+    {
+      "id": "-M5pHEVdhc3QH_9YIcmY",
+      "institution": {
+        "en": "University of Bayreuth",
+        "de": "Universität Bayreuth"
+      },
+      "index": 1,
+      "studyType": "Bachelor of Science (B.Sc.), Computer Science",
+      "startDate": "2011-10-01",
+      "endDate": "2015-04-01"
+    }
+  ],
+  "skills": [
+    {
+      "id": "d46273d2-de15-435a-b01a-48b1ac34c719",
+      "name": "C++",
+      "position": 0,
+      "value": 92,
+      "passion": 99
+    },
+    {
+      "id": "9b58d35c-663e-4acc-ba8d-fe2e66f6e41b",
+      "name": "NodeJS",
+      "position": 1,
+      "value": 77,
+      "passion": 88
+    },
+    {
+      "id": "307b6b25-edb1-453d-a261-8644bed37caa",
+      "name": "React",
+      "position": 2,
+      "value": 81,
+      "passion": 78
+    },
+    {
+      "id": "f771f40a-d639-40e6-9daf-0007732b888d",
+      "name": "Javascript",
+      "position": 3,
+      "value": 100,
+      "passion": 95
+    },
+    {
+      "id": "3b98abd4-20f0-4d91-ac6a-8f182d032183",
+      "name": "Embedded",
+      "position": 10,
+      "value": 89,
+      "passion": 88
+    },
+    {
+      "id": "d6cb9977-c08a-4d8d-9cd4-1247a60c7e5e",
+      "name": "MongoDB",
+      "position": 4,
+      "value": 70,
+      "passion": 74
+    },
+    {
+      "id": "9fa4355e-9e65-47bd-8470-7b2648671804",
+      "name": "SQL",
+      "position": 5,
+      "value": 83,
+      "passion": 65
+    },
+    {
+      "id": "e43f4b29-ed38-4c3c-b57b-b609e5058014",
+      "name": "Ruby",
+      "position": 6,
+      "value": 65,
+      "passion": 90
+    },
+    {
+      "id": "95413675-0e6b-45d6-b617-427d9920c980",
+      "name": "Python",
+      "position": 7,
+      "value": 60,
+      "passion": 55
+    },
+    {
+      "id": "f599dbee-6131-471f-bbf6-c005f7c2ee06",
+      "name": "Java",
+      "position": 8,
+      "value": 90,
+      "passion": 30
+    },
+    {
+      "id": "bad1f3e2-57f6-408e-a5ce-89386b091b32",
+      "name": "C",
+      "position": 9,
+      "value": 90,
+      "passion": 50
+    }
+  ],
+  "languages": [
+    {
+      "name": "German",
+      "position": 0,
+      "value": 100,
+      "language": {
+        "en": "German",
+        "de": "Deutsch"
+      },
+      "code": "DE",
+      "id": "-M5pHEVdhc3QH_9YIcmT"
+    },
+    {
+      "name": "English",
+      "position": 1,
+      "value": 80,
+      "language": {
+        "en": "English",
+        "de": "Englisch"
+      },
+      "code": "EN",
+      "id": "-M5pLbygRdOZ6CG0FqM3"
+    },
+    {
+      "name": "French",
+      "position": 2,
+      "value": 30,
+      "language": {
+        "en": "French",
+        "de": "Französisch"
+      },
+      "code": "FR",
+      "id": "-M5pLeae6LIVDte3RWrn"
+    }
+  ],
+  "interests": [
+    {
+      "gifUrl": "https://media1.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif?cid=e3b0c442478b7bab33d10dc41241b7123fe79ef7751a6caa&rid=giphy.gif",
+      "id": "567944c9-790c-46bf-ace5-6bdbf12957a4",
+      "index": 0,
+      "name": {
+        "en": "Programming",
+        "de": "Programmieren"
+      }
+    },
+    {
+      "gifUrl": "https://media0.giphy.com/media/ilk494rSG3SaQ/giphy-downsized.gif?cid=e3b0c44268fb6851ab18d5d8512b37577479bde16f7a36d0&rid=giphy-downsized.gif",
+      "id": "25be6921-cdc0-4db0-b1e2-3a0eedf78f20",
+      "index": 1,
+      "name": "Motorsport"
+    },
+    {
+      "gifUrl": "https://media1.giphy.com/media/4599UNa1cuKtCW3Qcw/giphy-downsized.gif?cid=e3b0c442d467e3bed186a27f7df09d80c381a0cd8c23bcac&rid=giphy-downsized.gif",
+      "id": "bd3c042f-8bab-4fed-b7c8-fa0380abc7f0",
+      "index": 2,
+      "name": {
+        "en": "Biking",
+        "de": "Radfahren"
+      }
+    },
+    {
+      "gifUrl": "https://media.giphy.com/media/W5U4LNiJPPVvPbbQlU/giphy.gif",
+      "id": "69774d62-8fdf-48cb-9d03-4744f966550f",
+      "index": 3,
+      "name": "SimRacing"
+    },
+    {
+      "gifUrl": "https://media2.giphy.com/media/26DN7HHaKsz2LDypO/giphy-downsized.gif?cid=e3b0c442dcb567c9aa75b2df604d3b660eccb74d6030c8f6&rid=giphy-downsized.gif",
+      "id": "6a358743-988d-4136-9e8b-2dbc58d2433f",
+      "index": 4,
+      "name": "Pen & Paper RPGs"
+    }
+  ],
+  "projects": [
+    {
+      "date": {
+        "month": 1,
+        "year": 2020
+      },
+      "startDate": "2018-01-01",
+      "description": {
+        "en": "React-based web platform for VoltStorage employees & partners. Offers product monitoring, troubleshooting, battery installation support, statistics, firmware updates, setting changes and much more.\n\nMy role: Architect, Lead Engineer",
+        "de": "React-basierte Web-Plattform für Mitarbeiter und Partner von VoltStorage. Bietet Produktüberwachung, Fehlerdiagnose, Unterstützung bei der Batterieinstallation, Statistiken, Firmware-Updates, Einstellungsmöglichkeiten und vieles mehr.\n\nMeine Rolle: Architekt, leitender Ingenieur"
+      },
+      "id": "003b6b55-6d1e-4e79-9354-f4b45bf3c445",
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/Wdeu7rniQNqDnew1GthR"
+        }
+      ],
+      "link": "",
+      "name": "VoltStorage Admin Interface",
+      "endDate": "2020-02-01"
+    },
+    {
+      "date": {
+        "month": 10,
+        "year": 2019
+      },
+      "description": {
+        "en": "Google Chrome extension adding touch controls to the virtual tabletop service \"Roll20\". Registers touch input (from fingers or pens) and simulates the corresponding mouse & keyboard commands for the underlying system.\n\nOne of my hobby projects. I am the sole developer.",
+        "de": "Google-Chrome-Erweiterung, dem virtuellen Spieltisch-Dienst \"Roll20\" Touch-Unterstützung hinzufügt. Registriert Berührungseingaben (von Fingern oder Stiften) und simuliert die entsprechenden Maus- und Tastaturbefehle für das zugrundeliegende System.\n\nHobbyprojekt. Ich bin der einzige Entwickler."
+      },
+      "id": "df248d39-f1aa-4f59-93e2-01f49db38051",
+      "link": "https://chrome.google.com/webstore/detail/touch20/himdgcgphpbdjgkdeiofihmgneenojlg",
+      "name": "Touch20",
+      "startDate": "2019-03-01",
+      "endDate": "2020-05-01"
+    },
+    {
+      "date": {
+        "month": 7,
+        "year": 2019
+      },
+      "description": {
+        "en": "Customer-facing progressive WebApp. Fully responsive, live & historic data display for owned batteries & other power-related household metrics.\n\nMy role: Architect, Lead Engineer",
+        "de": "Voll responsive, kundenseitige Progressive WebApp. Anzeige von Live- und historischen Daten für den eigenen Stromspeicher und andere Energiemetriken des Haushalts.\n\nMeine Rolle: Architekt, leitender Ingenieur"
+      },
+      "id": "e9194f64-dff1-4317-a517-eb787df46012",
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/ciSGr3udQBCHbfhDhuA2"
+        },
+        {
+          "url": "https://cdn.filestackcontent.com/m46Vhl52R9m19LCiVWwm"
+        }
+      ],
+      "link": "https://app.voltstorage.com/",
+      "name": "VoltStorage App",
+      "startDate": "2017-11-01",
+      "endDate": "2020-07-01"
+    },
+    {
+      "date": {
+        "month": 0,
+        "year": 2018
+      },
+      "description": {
+        "en": "A server-side application providing a REST-API plus a WebSocket API for real-time data transfer. Acts as a management application for the company's fleet of smart home batteries. Manages per-battery settings, provides over-the-air updates, receives, processes and stores real-time data from all products (1 Hz), aggregates statistics and much more.\n\nNode.js-based. Uses MongoDB for real-time data & PostgreSQL for everything else.\n\nMy role: Architect, Lead Engineer",
+        "de": "Eine serverseitige Anwendung, die eine REST-API und eine WebSocket-API für die Echtzeit-Datenübertragung bereitstellt. Dient als Verwaltungssystem für die Flotte der intelligenten VoltStorage Stromspeichersysteme. Verwaltet die Einstellungen für jedes Produkt, stellt Over-the-Air-Updates zur Verfügung, empfängt, verarbeitet und speichert Echtzeitdaten von allen Produkten (1 Hz), aggregiert Statistiken und vieles mehr.\n\nNode.js-basiert. Verwendet MongoDB für Echtzeitdaten & PostgreSQL für alles andere.\n\nMeine Rolle: Architekt, Leitender Ingenieur"
+      },
+      "id": "bff392c7-1e64-4d12-9538-78a891c4d263",
+      "index": 1,
+      "name": "VoltStorage Backend",
+      "startDate": "2017-06-01",
+      "endDate": "2020-07-01"
+    },
+    {
+      "date": {
+        "month": 9,
+        "year": 2017
+      },
+      "description": {
+        "en": "Microcontroller firmware for VoltStorage's smart home batteries. Based on Espressif's ESP32 chip, programmed in C++. IoT project with low-level hardware interaction, secure server communication & over-the-air updates on a severely resource-constrained device (we're talking 520 kB of RAM).\n\nMy role: Architect, Lead Engineer",
+        "de": "Mikrocontroller-Firmware für die Stromspeichersysteme von VoltStorage. Basiert auf dem ESP32-Chip von Espressif, programmiert in C++. IoT-Projekt mit Low-Level Hardwareinteraktion, sicherer Server-Kommunikation und Over-the-Air-Updates auf einem Gerät mit stark eingeschränkten Ressourcen (~520 kB RAM).\n\nMeine Rolle: Architekt, leitender Ingenieur"
+      },
+      "id": "17996be7-4b2e-4ece-bc46-bcadb463b5af",
+      "name": "VoltStorage Firmware",
+      "startDate": "2017-04-01",
+      "endDate": "2020-07-01"
+    },
+    {
+      "date": {
+        "month": 4,
+        "year": 2015
+      },
+      "description": {
+        "en": "Battery Management System for a high-voltage tractive system battery used in an electric race car. Based on an STM32 microcontroller, this system continuously monitors voltage & temperature of every single one of the 140 cells in the battery pack. Emergency shutdown functionality. Manages balanced battery charging. Calculates the state of charge.\n\nMy role: Lead Software Developer",
+        "de": "Batteriemanagementsystem für eine Hochvoltbatterie des Antriebssystems, die in einem elektrischen Rennwagen verwendet wird. Basiert auf einem STM32-Mikrocontroller, überwacht kontinuierlich Spannung und Temperatur jeder einzelnen der 140 Zellen des Batteriepacks. Funktion zur automatischen Notfallabschaltung. Balanciert die Ladung der Zellen automatisch. Berechnet den Ladezustand.\n\nMeine Rolle: Leitender Software-Entwickler"
+      },
+      "id": "4f9a5dcf-f80c-4137-a3b1-54d816a4711b",
+      "name": "Elefant Racing BMS",
+      "startDate": "2015-02-01",
+      "endDate": "2015-06-01"
+    },
+    {
+      "date": {
+        "month": 3,
+        "year": 2015
+      },
+      "description": {
+        "en": "An online character sheet for a Pen & Paper role playing system set in the world of Bethesda's \"Elder Scrolls: Morrowind\". \n\nTech: Ruby on Rails, AngularJS. I am the sole developer & maintainer",
+        "de": "Ein Online-Charakterblatt für ein Pen & Paper-Rollenspielsystem, das in der Welt von Bethesdas \"Elder Scrolls: Morrowind\" spielt. \n\nTechnik: Ruby on Rails, AngularJS. Ich bin der einzige Entwickler."
+      },
+      "id": "d26669da-3c26-4f87-a212-377825e2b020",
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/4iHBbkmQjKRTZPOLfePZ"
+        }
+      ],
+      "link": "https://morrowind.bauske.org/",
+      "name": "Morrowind Pen & Paper",
+      "startDate": "2015-02-01",
+      "endDate": "2015-05-01"
+    },
+    {
+      "date": {
+        "month": 6,
+        "year": 2014
+      },
+      "description": {
+        "en": "Software for an ECU (electronic control unit) of an electric race car. Based on a Linux-powered single-board computer this software manages all vehicle functions from throttle input to inverter output. Real time capable with 1000 Hz sample rate. Live telemetry system via WiFi & ZigBee radio. Sensor input & vehicle dynamics controls (recuperation, traction control, launch control).\n\nThis was my Bachelor Thesis. I was the sole developer & designer.",
+        "de": "Software für die ECU (Hauptsteuergerät) eines elektrischen Rennwagens. Basierend auf einem Linuxgestützten Einplatinencomputer verwaltet diese Software alle Fahrzeugfunktionen von der Gaspedalstellung bis zum Wechselrichterausgang. Echtzeitfähig mit 1000 Hz Durchlaufrate. Live-Telemetriesystem über WiFi & ZigBee-Funk. Einlesen der Sensoren & Fahrdynamikregelungen (Rekuperation, Traktionskontrolle, Launch Control).\n\nDies war meine Bachelorarbeit. Ich war der einzige Entwickler."
+      },
+      "id": "a05d3908-285a-4f32-8f51-796394a51fbc",
+      "name": "Elefant Racing Ebox",
+      "startDate": "2013-09-01",
+      "endDate": "2014-07-01"
+    },
+    {
+      "date": {
+        "month": 6,
+        "year": 2013
+      },
+      "description": {
+        "en": "Data analysis & telemetry software. First use case were Formula Student race cars but Elemetry continued to be used in a multitude of environments. Home-grown graph renderer capable of displaying millions of data points with axis-independent zoom in real time. Based on Java and JavaFx.\n\nMy Role: Lead Developer, manager of up to 4 team members.",
+        "de": "Datenanalyse- und Telemetriesoftware. Erster Anwendungsfall waren Formula Student-Rennwagen, aber Elemetry wurde danach in vielen verschiedenen von Umgebungen eingesetzt. Eigenentwickelter Graphen-Renderer, der in der Lage ist, Millionen von Datenpunkten mit achsenunabhängigem Zoom in Echtzeit zu rendern. Basiert auf Java und JavaFx.\n\nMeine Rolle: Leitender Entwickler, Manager von bis zu 4 Teammitgliedern."
+      },
+      "id": "f8316647-b3c6-452b-bdcf-39b244c5a3d6",
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/u11ZyC2ShOcRORgxNXYQ"
+        }
+      ],
+      "name": "Elemetry",
+      "startDate": "2012-10-01",
+      "endDate": "2015-07-01"
+    }
+  ],
+  "specific": {
+    "basics": {
+      "visaSponsorship": false,
+      "personalDescription": {
+        "en": "I am a software enthusiast.\n\nThat covers it pretty well. But to give you some details:\n\nI am a software engineer. I love to design & implement solutions for complex IT problems. I design software systems to be prepared for change instead of fearing change. Security and efficiency are of utmost importance to me.\n\nI am an expert programmer. I learned to code in my teenage years and went on to teach myself language after language, technology after technology. I strive for clean and efficient solutions. Automated testing is second nature to me and I use Test-Driven Development whenever possible.\n\nI am versatile. I've worked professionally in various fields - including Real-Time Embedded Systems, Database Engineering, Full-Stack Web Development, App Development and server management and administration. In addition, I am no stranger to electronics, engineering, business processes and conducting interviews.\n\nI am a leader. I combine technical competence with the social skills required to lead and motivate a team - all this while listening to the wishes, needs and suggestions from the team members. I am willing and able to make tough decisions and I take the blame for my failures.\n\nI am not a scientist. I am not someone who invents new algorithms on a world-class level.",
+        "de": "Ich bin Software-Enthusiast.\n\nDas beschreibt mich ziemlich gut. Aber um noch etwas ins Detail zu gehen:\n\nIch bin Softwareingenieur. Ich liebe es, Lösungen für komplexe IT-Probleme zu entwerfen und zu implementieren. Ich entwerfe Softwaresysteme, die sich an veränderte Anforderungen anpassen können anstatt Veränderungen zu fürchten. Sicherheit und Effizienz sind für mich von größter Bedeutung.\n\nIch bin ein erfahrener Programmierer. Ich habe als Teenager Programmieren gelernt und habe mir eine Sprache nach der anderen, eine Technologie nach der anderen beigebracht. Ich strebe nach sauberen und effizienten Lösungen. Automatisiertes Testen ist für mich eine Selbstverständlichkeit und ich verwende testgetriebene Entwicklung (TDD) wann immer es möglich ist.\n\nIch bin vielseitig. Ich habe in verschiedenen Bereichen gearbeitet - darunter eingebettete Echtzeitsysteme, Datenbank-Engineering, Full-Stack-Webentwicklung, App-Entwicklung und Server-Management und -Administration. Darüber hinaus sind mir Elektronik, Technik, Geschäftsprozesse und das Führen von Interviews nicht fremd.\n\nIch bin ein Leader. Ich verbinde technische Kompetenz mit den für die Teamführung und -motivation erforderlichen sozialen Fähigkeiten - all dies unter Berücksichtigung der Wünsche, Bedürfnisse und Vorschläge der Teammitglieder. Ich bin willens und in der Lage, harte Entscheidungen zu treffen und nehme die Verantwortung für Fehler auf mich.\n\nIch bin kein Wissenschaftler. Ich bin nicht jemand, der neue Algorithmen auf Weltklasseniveau erfindet."
+      }
+    },
+    "dreamJob": {
+      "locations": [
+        {
+          "id": "ChIJqVPfD0wEn0cRYHk4CaQlHQE",
+          "index": 2,
+          "placeId": "ChIJqVPfD0wEn0cRYHk4CaQlHQE",
+          "name": {
+            "en": "Bavaria, Germany",
+            "de": "Bayern"
+          },
+          "ideally": {
+            "en": "Franconia, Germany",
+            "de": "Franken"
+          }
+        }
+      ],
+      "perks": {
+        "challenge": true,
+        "responsibilities": true,
+        "leadership": true,
+        "salary": true,
+        "mood": true
+      },
+      "remoteFrequency": "occasionally"
+    },
+    "currentJob": {},
+    "education": {
+      "studiesLevel": 5
+    },
+    "work": {
+      "contractTypes": [
+        "freelance",
+        "permanent"
+      ],
+      "codingYears": 12,
+      "searchState": "openOpportunities",
+      "experienceYears": 5
+    },
+    "sound": {},
+    "interestedBy": "Rust, Julia, VHDL"
+  },
+  "imprint": {
+    "name": "David Bauske",
+    "address": "Alfred-Schmidt-Str. 2",
+    "zip": "81379",
+    "city": "München",
+    "country": "Germany",
+    "email": "david.bauske@googlemail.com"
+  }
+}

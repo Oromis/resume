@@ -1,9 +1,10 @@
 import React, { memo, useCallback, useMemo } from 'react';
 
 import { createUseStyles } from 'react-jss';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import { Typography } from '@welovedevs/ui';
+import { getProfileText } from '../../../../../utils/profile_translation';
 import { ProfileCardPaddedFront } from '../../../../commons/profile_card/profile_card_padded_front/profile_card_padding_front';
 import { CenterContentContainer } from '../../../../commons/center_content_container/center_content_container';
 import { ProfileCardFrontTypography } from '../../../../commons/profile_card/profile_card_front_typography/profile_card_front_typography';
@@ -48,6 +49,7 @@ const StudiesFrontComponent = ({ data: { education: data }, handleAddButtonClick
 };
 
 const Content = ({ hasEducation, data, handleAddButtonClick, classes }) => {
+    const intl = useIntl();
     if (hasEducation) {
         return (
             <>
@@ -56,7 +58,7 @@ const Content = ({ hasEducation, data, handleAddButtonClick, classes }) => {
                     <FormattedMessage
                         id="Studies.title"
                         defaultMessage="I graduated from {schoolName}"
-                        values={{ schoolName: data?.[0]?.institution }}
+                        values={{ schoolName: getProfileText(data?.[0]?.institution, { intl }) }}
                     />
                 </ProfileCardFrontTypography>
             </>
