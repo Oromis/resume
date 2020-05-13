@@ -14,7 +14,7 @@ const GifsEditDialogComponent = ({ open, onClose, data, onEdit, validationSchema
     const classes = useStyles();
     const { formatMessage } = useIntl();
 
-    const validationSchemaToPass = useMemo(() => validationSchema(formatMessage), [validationSchema]);
+    const validationSchemaToPass = useMemo(() => validationSchema(formatMessage), [validationSchema, formatMessage]);
 
     return (
         <>

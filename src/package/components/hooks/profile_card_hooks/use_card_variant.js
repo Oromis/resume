@@ -6,7 +6,7 @@ import { SET_VARIANT } from '../../../store/profile_card/profile_card_actions_ty
 
 export const useCardVariant = () => {
     const { state, dispatch } = useContext(ProfileCardContext);
-    const variant = useMemo(() => state.variant, [state.variant.toString()]);
+    const variant = useMemo(() => state.variant, [state.variant]);
 
     const setCardVariant = useCallback(
         (newVariant) =>
@@ -14,7 +14,7 @@ export const useCardVariant = () => {
                 type: SET_VARIANT,
                 variant: newVariant
             }),
-        []
+        [dispatch]
     );
 
     return [variant, setCardVariant];

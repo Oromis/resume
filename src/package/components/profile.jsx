@@ -95,7 +95,7 @@ const DeveloperProfileComponent = ({
             receivedGlobalClasses,
             customization: options?.customization
         }),
-        [apiKeys, endpoints, additionalNodes, receivedGlobalClasses, JSON.stringify(options?.customization)]
+        [apiKeys, endpoints, additionalNodes, receivedGlobalClasses, options]
     );
 
     const data = useMemo(() => originalData, [JSON.stringify(originalData)]);

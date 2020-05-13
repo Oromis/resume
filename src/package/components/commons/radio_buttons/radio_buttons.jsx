@@ -11,13 +11,13 @@ const useStyles = createUseStyles(styles);
 
 const RadioButton = ({ option, color, backgroundColor, size, isSelected, onClick }) => {
     const theme = useTheme();
-    const fgColor = useMemo(() => (isSelected ? backgroundColor : color), [isSelected, color, backgroundColor, theme]);
-    const bgColor = useMemo(() => (isSelected ? color : backgroundColor), [isSelected, color, backgroundColor, theme]);
+    const fgColor = useMemo(() => (isSelected ? backgroundColor : color), [isSelected, color, backgroundColor]);
+    const bgColor = useMemo(() => (isSelected ? color : backgroundColor), [isSelected, color, backgroundColor]);
     const fgHexColor = useMemo(() => getHexFromTheme(theme, fgColor), [theme, fgColor]);
     const bgHexColor = useMemo(() => getHexFromTheme(theme, bgColor), [theme, bgColor]);
     const hexColor = useMemo(() => getHexFromTheme(theme, color), [theme, color]);
     const classes = useStyles({ color: fgHexColor, backgroundColor: bgHexColor, borderColor: hexColor });
-    const clickHandler = useCallback(() => onClick(option), [option]);
+    const clickHandler = useCallback(() => onClick(option), [option, onClick]);
 
     return (
         <Tooltip title={option.label}>

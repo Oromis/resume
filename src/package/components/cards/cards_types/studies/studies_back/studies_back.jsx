@@ -6,7 +6,6 @@ import { ProfileCardSection } from '../../../../commons/profile_card/profile_car
 import { ProfileCardSectionTitle } from '../../../../commons/profile_card/profile_card_section_title/profile_card_section_title';
 import { ProfileCardAnimatedBack } from '../../../../commons/profile_card/profile_card_animated_back/profile_card_animated_back';
 import { ProfileCardSectionSubtitle } from '../../../../commons/profile_card/profile_card_section_subtitle/profile_card_section_subtitle';
-import { ProfileCardSectionText } from '../../../../commons/profile_card/profile_card_section_text/profile_card_section_text';
 import { existsAndNotEmpty } from '../../../utils/exists_and_not_empty';
 import { NoStudies } from './no_studies/no_studies';
 import styles from './studies_back_styles';
@@ -30,7 +29,7 @@ const Study = ({ study }) => {
         }
 
         return bodyParts;
-    }, [study]);
+    }, [study, area, studyType]);
 
     const date = useMemo(() => {
         const startYear = startDate.year();

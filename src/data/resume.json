@@ -382,7 +382,7 @@
       "name": "Arduino",
       "value": 85,
       "passion": 35,
-      "tags": ["embedded", "scatter"]
+      "tags": ["embedded"]
     },
     {
       "name": "Scala",

@@ -11,7 +11,7 @@ import translations from './intested_by_translations';
 
 const InterestedByEditDialogComponent = ({ open, onClose, data, onEdit, validationSchema, isEditing }) => {
     const { formatMessage } = useIntl();
-    const validationSchemaToPass = useMemo(() => validationSchema(formatMessage), [validationSchema]);
+    const validationSchemaToPass = useMemo(() => validationSchema(formatMessage), [validationSchema, formatMessage]);
 
     return (
         <EditDialog

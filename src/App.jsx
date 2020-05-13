@@ -8,6 +8,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import download from 'downloadjs';
 import { Button } from '@welovedevs/ui';
 import moment from 'moment';
+import { BrowserRouter, Switch, Route, useHistory, useParams } from 'react-router-dom';
 
 import JsonStub from './data/resume.json';
 import DeveloperProfile from './package';
@@ -55,9 +56,32 @@ function getInitialLanguage() {
 }
 
 function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact>
+                    <LanguageRedirect />
+                </Route>
+                <Route path="/:locale">
+                    <ProfileRoot />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    );
+}
+
+function LanguageRedirect() {
+    const history = useHistory();
+    const locale = getInitialLanguage();
+    history.replace(`/${locale}`);
+    return null;
+}
+
+function ProfileRoot() {
     const classes = useStyles();
     const [data, setData] = useState(omit(JsonStub, 'resumeCustomization'));
-    const [locale, setLocale] = useState(getInitialLanguage());
+    const history = useHistory();
+    const { locale } = useParams();
 
     const onEdit = useCallback((newData) => setData(mergeWith(cloneDeep(data), newData, mergeFunction)), [
         JSON.stringify(data)
@@ -78,14 +102,12 @@ function App() {
         );
     }, [JSON.stringify(data), JSON.stringify(customization)]);
 
-    const onChangeLanguage = useCallback(
-        (languageOption) => {
-            storeSelectedLanguage(languageOption.key);
-            moment.locale(languageOption.key);
-            setLocale(languageOption.key);
-        },
-        [setLocale]
-    );
+    const onChangeLanguage = useCallback((languageOption) => {
+        const newLocale = languageOption.key;
+        storeSelectedLanguage(newLocale);
+        moment.locale(newLocale);
+        history.push(`/${newLocale}`);
+    }, []);
 
     return (
         <DeveloperProfile
