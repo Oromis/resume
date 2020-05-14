@@ -8,7 +8,11 @@ export const styles = (theme) => {
             margin: 0,
             lineHeight: 1.6,
             whiteSpace: 'pre-line',
-            marginTop: spacing
+            marginTop: spacing,
+
+            '&:last-child': {
+                marginBottom: spacing
+            }
         }
     };
 };

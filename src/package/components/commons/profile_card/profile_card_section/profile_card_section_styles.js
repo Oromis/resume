@@ -10,9 +10,6 @@ export const styles = (theme) => {
             margin: [spacing * 3, 0],
             '&:first-child': {
                 marginTop: 0
-            },
-            '&:last-child': {
-                marginBottom: 0
             }
         })
     };
