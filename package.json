@@ -23,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/welovedevs/react-ultimate-resume.git"
+        "url": "git@github.com:Oromis/resume.git"
     },
     "author": "WeLoveDevs.com",
     "license": "AGPLv3",
@@ -49,6 +49,7 @@
         "lodash": "^4.17.15",
         "moment": "^2.24.0",
         "prop-types": "15.7.2",
+        "puppeteer": "^3.0.4",
         "react-dropzone": "^10.2.1",
         "react-emoji-render": "^1.2.1",
         "react-images": "^1.1.0-beta.3",
