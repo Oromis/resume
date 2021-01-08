@@ -216,6 +216,12 @@
       "tags": ["overview", "backend", "scatter", "language", "mobile"]
     },
     {
+      "name": "Kotlin",
+      "value": 93,
+      "passion": 80,
+      "tags": ["overview", "backend", "scatter", "language", "mobile"]
+    },
+    {
       "name": "C",
       "value": 90,
       "passion": 50,
@@ -758,7 +764,7 @@
         "salary": true,
         "mood": true
       },
-      "remoteFrequency": "occasionally"
+      "remoteFrequency": "regularly"
     },
     "currentJob": {},
     "education": {
