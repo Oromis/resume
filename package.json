@@ -4,7 +4,7 @@
     "description": "Resume of David Bauske",
     "main": "lib/index.js",
     "scripts": {
-        "start": "touch .env.local && cross-env PORT=3123 BROWSER=none react-scripts start'",
+        "start": "cross-env PORT=3123 BROWSER=none react-scripts start'",
         "dev": "yarn start",
         "eject": "react-scripts eject",
         "test": "react-scripts test",

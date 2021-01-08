@@ -12,17 +12,34 @@
     "location": {
       "countryCode": "DE",
       "city": {
-        "en": "Munich",
-        "de": "München"
+        "en": "Bayreuth",
+        "de": "Bayreuth"
       }
     }
   },
   "work": [
     {
+      "name": "Senacor Technologies AG",
+      "position": "Senior Developer",
+      "index": 0,
+      "startDate": "2020-10-01",
+      "summary": {
+        "en": "Senior developer at IT Consulting company in the financial/banking industry.\nMicroservices, Kotlin, Spring, Agile & Scrum",
+        "de": "Senior developer bei IT-Consulting-Firma in der Finanz-/Bankenbranche.\nMicroservices, Kotlin, Spring, Agile & Scrum"
+      },
+      "location": {
+        "en": "Remote | Berlin, Germany",
+        "de": "Remote | Berlin, Deutschland"
+      },
+      "placeId": "ChIJ2V-Mo_l1nkcRfZixfUq4D32",
+      "id": "-M5pHEVdhc3QH_9YIaze"
+    },
+    {
       "name": "VoltStorage GmbH",
       "position": "Head of IT",
       "index": 0,
       "startDate": "2017-04-01",
+      "endDate": "2020-09-30",
       "summary": {
         "en": "Head of IT at CleanTech Start-up, leader of a team of 3. Software Architect, Project Manager & Engineer.\nNode.js, React, Embedded C++ and much more.",
         "de": "Head of IT bei CleanTech Start-up, Leiter eines 3-köpfigen Teams. Projektmanager, Software-Architekt & -Ingenieur.\nNode.js, React, Embedded C++ und vieles mehr."
